@@ -2,8 +2,8 @@
 
 import { Roboto, Montserrat } from "next/font/google";
 import { I18nextProvider } from "react-i18next";
-import i18next from "./i18n";
 import { useTranslation } from "react-i18next";
+import i18next from "./i18n";
 import "./globals.css";
 
 const roboto = Roboto({
