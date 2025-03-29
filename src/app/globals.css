@@ -148,6 +148,7 @@ button {
   @apply cursor-pointer focus:outline-none;
 }
 
+/* Hero Slider */
 .swiper-pagination-hero .swiper-pagination-bullet {
   transition: all 0.3s ease-in-out;
 }
@@ -158,4 +159,16 @@ button {
   transform: scale(1.2);
   width: 20px;
   border-radius: 10px;
+}
+
+/* Latest Slider */
+
+.swiper-pagination-latest .swiper-pagination-bullet {
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-latest .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: red;
+  transform: scale(1.2);
 }

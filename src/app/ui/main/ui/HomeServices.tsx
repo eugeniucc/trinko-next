@@ -70,7 +70,7 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-b border-x border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
+            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-b md:border-x border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
           >
             <Image
               src="/images/home/sections/services/icon-02-80x80.png"
@@ -116,7 +116,7 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex border-b border-black hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center bg-zinc-100"
+            className="flex border-black hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center bg-zinc-100"
           >
             <Image
               src="/images/home/sections/services/icon-04-80x80.png"
@@ -139,7 +139,7 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-b border-x border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
+            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-y md:border-x md:border-y-0 border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
           >
             <Image
               src="/images/home/sections/services/icon-05-80x80.png"
@@ -162,7 +162,7 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 hover:scale-105 duration-300 hover:border-none border-b border-black text-center gap-6 items-center bg-zinc-100 justify-center"
+            className="flex flex-col p-6 hover:scale-105 duration-300 hover:border-none border-black text-center gap-6 items-center bg-zinc-100 justify-center"
           >
             <Image
               src="/images/home/sections/services/icon-06-80x80.png"
