@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { HeaderLogo } from "./ui/HeaderLogo";
 import { HeaderNavigation } from "./ui/HeaderNavigation";
