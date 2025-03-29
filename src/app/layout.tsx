@@ -3,6 +3,8 @@
 import { Roboto, Montserrat } from "next/font/google";
 import { I18nextProvider } from "react-i18next";
 import { useTranslation } from "react-i18next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 import i18next from "./i18n";
 import "./globals.css";
 
@@ -87,7 +89,10 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${montserrat.variable} antialiased bg-gray-100 text-[14px]`}
       >
-        <I18nextProvider i18n={i18next}>{children}</I18nextProvider>
+        <I18nextProvider i18n={i18next}>
+          {children}
+          <SpeedInsights />
+        </I18nextProvider>
       </body>
     </html>
   );
