@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 export default function Advantages() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.4,
+    threshold: 0.2,
   });
   const [ref2, inView2] = useInView({
     triggerOnce: true,

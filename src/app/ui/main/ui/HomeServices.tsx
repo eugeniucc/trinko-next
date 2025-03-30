@@ -62,7 +62,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -87,7 +87,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -112,7 +112,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -137,7 +137,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -162,7 +162,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -187,7 +187,7 @@ export const HomeServices = () => {
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
-            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-4 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
       </div>
