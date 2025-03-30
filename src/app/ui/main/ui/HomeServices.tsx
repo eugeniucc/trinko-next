@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { SquareArrowOutUpRight } from "lucide-react";
 
 export const HomeServices = () => {
   const [ref1, inView1] = useInView({
@@ -47,19 +48,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex border-b border-black hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center bg-zinc-100"
+            className="flex relative border-b group border-black hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center bg-zinc-100"
           >
             <Image
               src="/images/home/sections/services/icon-01-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -70,19 +73,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-b md:border-x border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
+            className="flex flex-col p-6 group relative text-center gap-6 items-center justify-center border-b md:border-x border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
           >
             <Image
               src="/images/home/sections/services/icon-02-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -93,19 +98,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 hover:scale-105 duration-300 hover:border-none border-b border-black text-center gap-6 items-center bg-zinc-100 justify-center"
+            className="flex flex-col group relative p-6 hover:scale-105 duration-300 hover:border-none border-b border-black text-center gap-6 items-center bg-zinc-100 justify-center"
           >
             <Image
               src="/images/home/sections/services/icon-03-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -116,19 +123,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex border-black hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center bg-zinc-100"
+            className="flex border-black relative hover:scale-105 duration-300 hover:border-none flex-col p-6 text-center gap-6 items-center justify-center group bg-zinc-100"
           >
             <Image
               src="/images/home/sections/services/icon-04-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -139,19 +148,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 text-center gap-6 items-center justify-center border-y md:border-x md:border-y-0 border-black hover:scale-105  hover:border-none bg-zinc-100 duration-300"
+            className="flex flex-col p-6 relative text-center gap-6 items-center justify-center border-y md:border-x md:border-y-0 border-black group hover:scale-105  hover:border-none bg-zinc-100 duration-300"
           >
             <Image
               src="/images/home/sections/services/icon-05-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
 
@@ -162,19 +173,21 @@ export const HomeServices = () => {
         >
           <Link
             href="/"
-            className="flex flex-col p-6 hover:scale-105 duration-300 hover:border-none border-black text-center gap-6 items-center bg-zinc-100 justify-center"
+            className="flex flex-col p-6 group relative hover:scale-105 duration-300 hover:border-none border-black text-center gap-6 items-center bg-zinc-100 justify-center"
           >
             <Image
               src="/images/home/sections/services/icon-06-80x80.png"
               alt="Service"
               width={80}
               height={80}
+              className="group-hover:rotate-45 transition-transform duration-600"
             />
             <h2>Tattooing</h2>
             <p>
               At our tattoo salon, we combine modern technics with traditional
               ones for a premium result.
             </p>
+            <SquareArrowOutUpRight className="w-4 h-4 absolute top-2 right-6 group-hover:rotate-360 duration-900" />
           </Link>
         </motion.div>
       </div>
