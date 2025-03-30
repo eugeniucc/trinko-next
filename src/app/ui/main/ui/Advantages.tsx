@@ -55,13 +55,7 @@ export default function Advantages() {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <motion.div
-                ref={ref2}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5 }}
-                className="relative py-10 text-left flex justify-end"
-              >
+              <div className="relative py-10 text-left flex justify-end">
                 <Quote className="h-30 w-30 text-stone-200 absolute top-0 left-0" />
                 <p className="relative text-right max-w-xl text-lg font-semibold">
                   Inkvo is a unique tattoo salon that offers a wide range of
@@ -69,7 +63,7 @@ export default function Advantages() {
                   providing our clients with the best possible tattoo
                   experience.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
 
