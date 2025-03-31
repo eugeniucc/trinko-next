@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { LanguageSwitcher } from "@/app/ui/header/ui/LanguageSwitcher";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { LanguageSwitcher } from '@/app/ui/header/ui/LanguageSwitcher'
 
 export const HeaderNavigation = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
-    <nav className="items-center gap-12 lg:gap-20 hidden lg:flex">
-      <ul className="flex gap-4 lg:gap-8 items-center">
+    <nav className="hidden items-center gap-12 lg:flex lg:gap-20">
+      <ul className="flex items-center gap-4 lg:gap-8">
         <li>
           <Link
             href="/"
             className={`${
-              pathname === "/"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Home
@@ -26,9 +26,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/about"
             className={`${
-              pathname === "/about"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/about'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             About
@@ -38,9 +38,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/services"
             className={`${
-              pathname === "/services"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/services'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Services
@@ -50,9 +50,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/gallery"
             className={`${
-              pathname === "/gallery"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/gallery'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Gallery
@@ -62,9 +62,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/blog"
             className={`${
-              pathname === "/blog"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/blog'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Blog
@@ -74,9 +74,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/course"
             className={`${
-              pathname === "/course"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/course'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Course
@@ -86,9 +86,9 @@ export const HeaderNavigation = () => {
           <Link
             href="/contacts"
             className={`${
-              pathname === "/contacts"
-                ? "text-red-500 border-red-500  border-b-1 pb-1  "
-                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+              pathname === '/contacts'
+                ? 'border-b-1 border-red-500 pb-1 text-red-500'
+                : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}
           >
             Contacts
@@ -97,5 +97,5 @@ export const HeaderNavigation = () => {
       </ul>
       <LanguageSwitcher />
     </nav>
-  );
-};
+  )
+}

@@ -1,11 +1,11 @@
-import { Container } from "@/app/ui/Container";
+import { Container } from '@/app/ui/Container'
 
 export const HomeFooter = () => {
   return (
     <footer className="bg-zinc-900">
-      <Container className={"py-12"}>
+      <Container className={'py-12'}>
         <p className="text-white">HomeFooter</p>
       </Container>
     </footer>
-  );
-};
+  )
+}

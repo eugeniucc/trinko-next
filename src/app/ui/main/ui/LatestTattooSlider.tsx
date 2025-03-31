@@ -1,30 +1,31 @@
-"use client";
+'use client';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Autoplay, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const images = [
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
-  "https://images.unsplash.com/photo-1611604548018-d56bbd85d681?q=80&w=1000",
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
+  {src: '/images/home/sections/portfolio/1.png'},
 ];
 
 const LatestTattooSlider = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.5
   });
 
   return (
@@ -36,39 +37,39 @@ const LatestTattooSlider = () => {
       className="container mb-30"
     >
       <Swiper
-        effect={"coverflow"}
+        effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        slidesPerView={'auto'}
         coverflowEffect={{
           rotate: 5,
           stretch: 0,
           depth: 300,
           modifier: 1.5,
-          slideShadows: true,
+          slideShadows: true
         }}
-        pagination={{ clickable: true, el: ".swiper-pagination-latest" }}
+        pagination={{ clickable: true, el: '.swiper-pagination-latest' }}
         autoplay={{
           delay: 1500,
-          disableOnInteraction: false,
+          disableOnInteraction: false
         }}
         modules={[EffectCoverflow, Pagination, Autoplay]}
         loop={true}
         speed={1000}
       >
         {images.map((img, index) => (
-          <SwiperSlide
-            key={index}
-            className="w-[280px]! h-[380px]! md:w-[650px]! md:h-[550px]! rounded-xl overflow-hidden"
-          >
-            <div className="relative w-full h-full group">
-              <img
-                src={img}
+          <SwiperSlide key={index} className="h-[380px]! w-[280px]! overflow-hidden rounded-xl md:h-[550px]! md:w-[650px]!">
+            <div className="group relative h-full w-full">
+              <Image
+                src={img.src}
                 alt={`Tattoo ${index + 1}`}
-                className="w-full h-full object-cover brightness-90 group-hover:brightness-110 transition-all duration-300"
+                width={650}
+                height={550}
+                className="h-full w-full object-cover brightness-90 transition-all duration-300 group-hover:brightness-110"
+                priority={index < 3} 
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <h3 className="text-white text-xl font-bold translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <h3 className="translate-y-4 text-xl font-bold text-white transition-transform duration-300 group-hover:translate-y-0">
                   Artwork #{index + 1}
                 </h3>
               </div>
@@ -77,7 +78,7 @@ const LatestTattooSlider = () => {
         ))}
       </Swiper>
       <div className="flex justify-center">
-        <div className="swiper-pagination-latest flex justify-center pt-10 gap-2"></div>
+        <div className="swiper-pagination-latest flex justify-center gap-2 pt-10"></div>
       </div>
     </motion.div>
   );

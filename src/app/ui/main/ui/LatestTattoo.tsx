@@ -1,14 +1,14 @@
-"use client";
+'use client'
 
-import { Container } from "@/app/ui/Container";
-import LatestTattooSlider from "@/app/ui/main/ui/LatestTattooSlider";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { Container } from '@/app/ui/Container'
+import LatestTattooSlider from '@/app/ui/main/ui/LatestTattooSlider'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 export const LatestTattoo = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.4,
-  });
+    threshold: 0.4
+  })
 
   return (
     <motion.div
@@ -20,21 +20,17 @@ export const LatestTattoo = () => {
     >
       <Container>
         <div className="py-20 sm:py-30">
-          <div className="flex flex-col gap-6 items-center justify-center text-center">
-            <h2 className="md:text-6xl text-4xl text-white">
-              Our Latest Tatoo
-            </h2>
-            <p className="text-white max-w-2xl">
-              Inkvo has a team of talented and highly creative artists whose
-              main goal is not just to keep you satisfied but also impress you
-              with a unique art that will help you stand out from the crowd. The
-              experience and unmatched skills of our tattooists are reasons of
-              our salon’s success.
+          <div className="flex flex-col items-center justify-center gap-6 text-center">
+            <h2 className="text-4xl text-white md:text-6xl">Our Latest Tatoo</h2>
+            <p className="max-w-2xl text-white">
+              Inkvo has a team of talented and highly creative artists whose main goal is not just to keep you satisfied but also
+              impress you with a unique art that will help you stand out from the crowd. The experience and unmatched skills of
+              our tattooists are reasons of our salon’s success.
             </p>
           </div>
         </div>
         <LatestTattooSlider />
       </Container>
     </motion.div>
-  );
-};
+  )
+}
