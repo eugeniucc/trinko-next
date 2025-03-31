@@ -1,4 +1,4 @@
-import { Container } from "../Container";
+import { Container } from "@/app/ui/Container";
 
 export const HomeFooter = () => {
   return (

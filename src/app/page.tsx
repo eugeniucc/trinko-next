@@ -1,8 +1,8 @@
-import { HeaderContacts } from "./ui/header/ui/HeaderContacts";
-import { HomeMain } from "./ui/main/HomeMain";
-import { HomeFooter } from "./ui/footer/HomeFooter";
-import HomeHeader from "./ui/header/HomeHeader";
-import HeroSlider from "./ui/HeroSlider";
+import { HeaderContacts } from "@/app/ui/header/ui/HeaderContacts";
+import { HomeMain } from "@/app/ui/main/HomeMain";
+import { HomeFooter } from "@/app/ui/footer/HomeFooter";
+import { HomeHeader } from "@/app/ui/header/HomeHeader";
+import { HeroSlider } from "@/app/ui/HeroSlider";
 
 export default function Home() {
   return (

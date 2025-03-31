@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import LanguageSwitcher from "./LanguageSwitcher";
+import { LanguageSwitcher } from "@/app/ui/header/ui/LanguageSwitcher";
 
 export const HeaderNavigation = () => {
   const pathname = usePathname();
@@ -15,8 +15,8 @@ export const HeaderNavigation = () => {
             href="/"
             className={`${
               pathname === "/"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Home
@@ -27,8 +27,8 @@ export const HeaderNavigation = () => {
             href="/about"
             className={`${
               pathname === "/about"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             About
@@ -39,8 +39,8 @@ export const HeaderNavigation = () => {
             href="/services"
             className={`${
               pathname === "/services"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Services
@@ -51,8 +51,8 @@ export const HeaderNavigation = () => {
             href="/gallery"
             className={`${
               pathname === "/gallery"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Gallery
@@ -63,8 +63,8 @@ export const HeaderNavigation = () => {
             href="/blog"
             className={`${
               pathname === "/blog"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Blog
@@ -75,8 +75,8 @@ export const HeaderNavigation = () => {
             href="/course"
             className={`${
               pathname === "/course"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Course
@@ -87,8 +87,8 @@ export const HeaderNavigation = () => {
             href="/contacts"
             className={`${
               pathname === "/contacts"
-                ? "text-red-500 border-red-500 font-bold border-b-1"
-                : "relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
+                ? "text-red-500 border-red-500  border-b-1 pb-1  "
+                : "relative after:content-[''] pb-1  after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-red-500 after:duration-300 hover:after:w-full text-white"
             }`}
           >
             Contacts

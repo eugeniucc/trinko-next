@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { usePathname } from "next/navigation";
 
-export default function LanguageSwitcher() {
+export const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
   const pathname = usePathname();
@@ -50,4 +50,4 @@ export default function LanguageSwitcher() {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-}
+};

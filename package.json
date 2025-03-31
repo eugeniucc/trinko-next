@@ -25,6 +25,7 @@
     "next": "15.2.3",
     "next-i18next": "^15.4.2",
     "photoswipe": "^5.4.4",
+    "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1",

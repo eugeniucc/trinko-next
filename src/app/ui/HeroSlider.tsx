@@ -12,7 +12,7 @@ import {
   Parallax,
   Navigation,
 } from "swiper/modules";
-import { CustomLink } from "./CustomLink";
+import { CustomLink } from "@/app/ui/CustomLink";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
@@ -36,7 +36,7 @@ const slides = [
   },
 ];
 
-export default function HeroSlider() {
+export const HeroSlider = () => {
   return (
     <div className="relative w-full h-screen">
       <Swiper
@@ -103,4 +103,4 @@ export default function HeroSlider() {
       </Swiper>
     </div>
   );
-}
+};

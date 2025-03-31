@@ -1,7 +1,8 @@
-import FewWords from "./ui/FewWords";
-import { HomeServices } from "./ui/HomeServices";
-import LatestTattoo from "./ui/LatestTattoo";
-import Advantages from "./ui/Advantages";
+import { HomeServices } from "@/app/ui/main/ui/HomeServices";
+import { LatestTattoo } from "@/app/ui/main/ui/LatestTattoo";
+import { Advantages } from "@/app/ui/main/ui/Advantages";
+import { Portfolio } from "@/app/ui/main/ui/Portfolio";
+import { FewWords } from "@/app/ui/main/ui/FewWords";
 
 export const HomeMain = () => {
   return (
@@ -10,6 +11,7 @@ export const HomeMain = () => {
       <HomeServices />
       <LatestTattoo />
       <Advantages />
+      <Portfolio />
     </main>
   );
 };

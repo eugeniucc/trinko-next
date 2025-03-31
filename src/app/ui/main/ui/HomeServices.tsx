@@ -1,6 +1,6 @@
 "use client";
 
-import { Container } from "../../Container";
+import { Container } from "@/app/ui/Container";
 import Link from "next/link";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";

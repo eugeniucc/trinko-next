@@ -1,10 +1,10 @@
 "use client";
 
-import { Container } from "../../Container";
-import LatestTattooSlider from "./LatestTattooSlider";
+import { Container } from "@/app/ui/Container";
+import LatestTattooSlider from "@/app/ui/main/ui/LatestTattooSlider";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-export default function LatestTattoo() {
+export const LatestTattoo = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.4,
@@ -37,4 +37,4 @@ export default function LatestTattoo() {
       </Container>
     </motion.div>
   );
-}
+};

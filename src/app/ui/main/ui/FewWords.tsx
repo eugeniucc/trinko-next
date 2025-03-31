@@ -1,10 +1,11 @@
 "use client";
 
-import { Container } from "../../Container";
-import { CustomLink } from "../../CustomLink";
+import { Container } from "@/app/ui/Container";
+import { CustomLink } from "@/app/ui/CustomLink";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-export default function FewWords() {
+
+export const FewWords = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.6,
@@ -62,4 +63,4 @@ export default function FewWords() {
       </Container>
     </section>
   );
-}
+};

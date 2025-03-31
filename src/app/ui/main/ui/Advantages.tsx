@@ -1,11 +1,11 @@
 "use client";
 
-import { Container } from "../../Container";
+import { Container } from "@/app/ui/Container";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
-export default function Advantages() {
+export const Advantages = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -113,4 +113,4 @@ export default function Advantages() {
       </Container>
     </motion.div>
   );
-}
+};

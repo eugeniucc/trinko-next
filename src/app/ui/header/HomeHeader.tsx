@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { HeaderLogo } from "./ui/HeaderLogo";
-import { HeaderNavigation } from "./ui/HeaderNavigation";
-import { Hamburger } from "./ui/Hamburger";
-import LanguageSwitcher from "./ui/LanguageSwitcher";
+import { HeaderLogo } from "@/app/ui/header/ui/HeaderLogo";
+import { HeaderNavigation } from "@/app/ui/header/ui/HeaderNavigation";
+import { Hamburger } from "@/app/ui/header/ui/Hamburger";
+import { LanguageSwitcher } from "@/app/ui/header/ui/LanguageSwitcher";
 
-const HomeHeader = () => {
+export const HomeHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,5 +41,3 @@ const HomeHeader = () => {
     </header>
   );
 };
-
-export default HomeHeader;
