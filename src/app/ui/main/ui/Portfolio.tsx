@@ -1,23 +1,37 @@
-'use client'
+'use client';
 
-import { Container } from '@/app/ui/Container'
-import { useEffect, useRef, useState } from 'react'
-import PhotoSwipeLightbox from 'photoswipe/lightbox'
-import 'photoswipe/style.css'
+import { Container } from '@/app/ui/Container';
+import { useEffect, useRef, useState } from 'react';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import Image from 'next/image';
 
+interface ImageType {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  category: string;
+}
+
+interface ImportMeta {
+  webpackHot?: {
+    decline: () => void;
+  };
+}
+
 export const Portfolio = () => {
-  const [activeTab, setActiveTab] = useState('all')
-  const galleryRef = useRef<HTMLDivElement>(null)
+  const [activeTab, setActiveTab] = useState('all');
+  const galleryRef = useRef<HTMLDivElement>(null);
 
   const categories = [
     { id: 'all', name: 'All Works' },
     { id: 'tattoo', name: 'Tattoo' },
     { id: 'piercing', name: 'Piercing' },
     { id: 'design', name: 'Design' }
-  ]
+  ];
 
-  const images = [
+  const images: ImageType[] = [
     {
       src: '/images/home/sections/portfolio/1.png',
       width: 800,
@@ -29,54 +43,61 @@ export const Portfolio = () => {
       src: '/images/home/sections/portfolio/1.png',
       width: 800,
       height: 1200,
-      alt: 'Tattoo 2',
+      alt: 'Tattoo 1',
       category: 'tattoo'
     },
     {
       src: '/images/home/sections/portfolio/1.png',
       width: 800,
       height: 1200,
-      alt: 'Piercing 1',
-      category: 'piercing'
+      alt: 'Tattoo 1',
+      category: 'tattoo'
     },
     {
       src: '/images/home/sections/portfolio/1.png',
       width: 800,
       height: 1200,
-      alt: 'Design 1',
-      category: 'design'
+      alt: 'Tattoo 1',
+      category: 'tattoo'
     },
     {
       src: '/images/home/sections/portfolio/1.png',
       width: 800,
       height: 1200,
-      alt: 'Design 1',
-      category: 'design'
-    }
-  ]
+      alt: 'Tattoo 1',
+      category: 'tattoo'
+    },
+    {
+      src: '/images/home/sections/portfolio/1.png',
+      width: 800,
+      height: 1200,
+      alt: 'Tattoo 1',
+      category: 'tattoo'
+    },
+  ];
 
   useEffect(() => {
-    let lightbox: PhotoSwipeLightbox
+    let lightbox: PhotoSwipeLightbox;
 
     if (galleryRef.current) {
       lightbox = new PhotoSwipeLightbox({
         gallery: '#portfolio-gallery',
         children: 'a',
         pswpModule: () => import('photoswipe')
-      })
+      });
 
-      lightbox.init()
+      lightbox.init();
     }
 
     return () => {
-      lightbox?.destroy()
-      if (typeof import.meta !== 'undefined' && (import.meta as any).webpackHot) {
-        ;(import.meta as any).webpackHot.decline()
+      lightbox?.destroy();
+      if (typeof import.meta !== 'undefined' && (import.meta as ImportMeta).webpackHot) {
+        (import.meta as ImportMeta).webpackHot?.decline();
       }
-    }
-  }, [activeTab])
+    };
+  }, [activeTab]);
 
-  const filteredImages = activeTab === 'all' ? images : images.filter((img) => img.category === activeTab)
+  const filteredImages = activeTab === 'all' ? images : images.filter((img) => img.category === activeTab);
 
   return (
     <Container>
@@ -110,7 +131,7 @@ export const Portfolio = () => {
               rel="noreferrer"
               className="block overflow-hidden rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl"
             >
-                <div className="relative h-full w-full">
+              <div className="relative h-full w-full">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -126,7 +147,5 @@ export const Portfolio = () => {
         </div>
       </section>
     </Container>
-  )
-}
-
-export default Portfolio
+  );
+};
