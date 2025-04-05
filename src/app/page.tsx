@@ -6,7 +6,7 @@ import { Advantages } from '@/app/ui/main/ui/Advantages'
 import { Portfolio } from '@/app/ui/main/ui/Portfolio'
 import { FewWords } from '@/app/ui/main/ui/FewWords'
 import { HomeReviews } from '@/app/ui/main/ui/HomeReviews'
-// import { MapBox } from '@/app/ui/MapBox'
+import { MapBox } from '@/app/ui/MapBox'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         <Advantages />
         <Portfolio />
         <HomeReviews />
-        {/* <MapBox /> */}
+        <MapBox />
       </MainTag>
     </>
   )
