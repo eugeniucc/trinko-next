@@ -5,6 +5,10 @@ import { I18nextProvider } from 'react-i18next'
 import { useTranslation } from 'react-i18next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
+import { JivoChat } from '@/app/jivochat'
+import { HeaderContacts } from '@/app/ui/header/ui/HeaderContacts'
+import { HomeHeader } from '@/app/ui/header/HomeHeader'
+import { HomeFooter } from '@/app/ui/footer/HomeFooter'
 
 import i18next from './i18n'
 import './globals.css'
@@ -83,9 +87,13 @@ export default function RootLayout({
       <title>{t('title')}</title>
       <body className={`${roboto.variable} ${montserrat.variable} bg-gray-100 text-[14px] antialiased`}>
         <I18nextProvider i18n={i18next}>
-          {children}
           <SpeedInsights />
           <Analytics />
+          <JivoChat />
+          <HeaderContacts />
+          <HomeHeader />
+          {children}
+          <HomeFooter />
         </I18nextProvider>
       </body>
     </html>

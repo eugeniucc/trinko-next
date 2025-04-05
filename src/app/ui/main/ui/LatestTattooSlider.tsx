@@ -1,32 +1,32 @@
-'use client';
+'use client'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { EffectCoverflow, Autoplay, Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import { useInView } from 'react-intersection-observer'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const images = [
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-  {src: '/images/home/sections/portfolio/1.png'},
-];
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' },
+  { src: '/images/home/sections/portfolio/1.png' }
+]
 
 const LatestTattooSlider = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5
-  });
+  })
 
   return (
     <motion.div
@@ -34,7 +34,7 @@ const LatestTattooSlider = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5 }}
-      className="container mb-30"
+      className="container mb-20"
     >
       <Swiper
         effect={'coverflow'}
@@ -66,7 +66,7 @@ const LatestTattooSlider = () => {
                 width={650}
                 height={550}
                 className="h-full w-full object-cover brightness-90 transition-all duration-300 group-hover:brightness-110"
-                priority={index < 3} 
+                priority={index < 3}
               />
               <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/80 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 <h3 className="translate-y-4 text-xl font-bold text-white transition-transform duration-300 group-hover:translate-y-0">
@@ -81,7 +81,7 @@ const LatestTattooSlider = () => {
         <div className="swiper-pagination-latest flex justify-center gap-2 pt-10"></div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default LatestTattooSlider;
+export default LatestTattooSlider

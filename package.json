@@ -25,6 +25,7 @@
     "i18next-http-backend": "^3.0.2",
     "intersection-observer": "^0.12.2",
     "lucide-react": "^0.483.0",
+    "mapbox-gl": "^3.11.0",
     "next": "^15.2.4",
     "next-i18next": "^15.4.2",
     "photoswipe": "^5.4.4",

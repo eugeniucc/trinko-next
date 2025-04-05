@@ -172,3 +172,10 @@ button {
   background: red;
   transform: scale(1.2);
 }
+
+/* MAPBOX */
+
+.mapboxgl-popup-close-button {
+  font-size: 24px;
+  padding: 10px;
+}
