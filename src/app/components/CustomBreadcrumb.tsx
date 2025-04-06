@@ -1,19 +1,10 @@
 'use client'
 
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator
-} from '@/components/ui/breadcrumb'
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb'
 import { usePathname } from 'next/navigation'
 
 export const CustomBreadcrumb = () => {
   const pathname = usePathname()
-
-  // Разделение пути на части
   const pathParts = pathname.split('/').filter(Boolean)
 
   return (

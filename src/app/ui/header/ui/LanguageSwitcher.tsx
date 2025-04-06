@@ -10,12 +10,9 @@ import {
 import { Languages } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTranslation } from 'react-i18next'
-import { usePathname } from 'next/navigation'
 
 export const LanguageSwitcher = () => {
   const { i18n } = useTranslation()
-
-  const pathname = usePathname()
 
   return (
     <DropdownMenu>
