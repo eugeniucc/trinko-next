@@ -75,5 +75,21 @@ export const MapBox = () => {
     }
   }, [])
 
-  return <div ref={mapContainerRef} className="h-[500px] w-full rounded-xl border border-gray-200 shadow-lg" />
+  return (
+    <section>
+      <div className="flex flex-col gap-4">
+        <h2 className="text-center text-4xl">Tattoo Salon in Chisinau on the Map</h2>
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p>Looking for the best tattoo salon in Chisinau? Visit Trinkotattoo, located right in the heart of the city.</p>
+          <p>
+            Our talented artists have years of experience and are ready to bring any of your tattoo ideas to life. Whether you’re
+            looking for a small, intricate design or a full sleeve, we offer custom tattoos tailored to your style. We prioritize
+            cleanliness, safety, and comfort, ensuring you have a memorable experience.
+          </p>
+        </div>
+      </div>
+
+      <div ref={mapContainerRef} className="h-[500px] w-full rounded-xl border border-gray-200 shadow-lg" />
+    </section>
+  )
 }

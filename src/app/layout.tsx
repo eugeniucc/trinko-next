@@ -5,7 +5,8 @@ import { I18nextProvider } from 'react-i18next'
 import { useTranslation } from 'react-i18next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
-import { JivoChat } from '@/app/jivochat'
+import { JivoChat } from '@/app/components/jivochat'
+import { AgeConfirm } from '@/app/components/AgeConfirm'
 import { HeaderContacts } from '@/app/ui/header/ui/HeaderContacts'
 import { HomeHeader } from '@/app/ui/header/HomeHeader'
 import { HomeFooter } from '@/app/ui/footer/HomeFooter'
@@ -90,6 +91,7 @@ export default function RootLayout({
           <SpeedInsights />
           <Analytics />
           <JivoChat />
+          <AgeConfirm />
           <HeaderContacts />
           <HomeHeader />
           {children}

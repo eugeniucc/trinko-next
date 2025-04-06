@@ -109,7 +109,7 @@ export const Portfolio = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-center text-4xl font-bold">Our Portfolio</h1>
+          <h1 className="text-center text-4xl md:text-6xl">Our Portfolio</h1>
           <p className="mx-auto my-12 max-w-3xl text-center">
             Our salon provides tattoos of various complexity. From simple to highly creative artworks, we gather all our
             achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.

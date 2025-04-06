@@ -27,7 +27,7 @@ export const Advantages = () => {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-4xl font-semibold md:text-6xl">Our advantages</h2>
+              <h2 className="text-4xl md:text-6xl">Our advantages</h2>
               <p className="text-lg font-semibold">
                 For over 10 years of constant improvement, we have become one of the most successful tattoo salons. Here’s why
                 people choose us.

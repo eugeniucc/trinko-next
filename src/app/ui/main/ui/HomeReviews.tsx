@@ -19,7 +19,7 @@ export const HomeReviews = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-4xl font-bold">Client Love & Stories</h3>
+          <h3 className="text-4xl">Client Love & Stories</h3>
           <p className="text-lg font-semibold">
             Every review is a story we cherish. Your feedback fuels our passion to create better art and experiences.
           </p>

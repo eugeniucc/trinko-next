@@ -22,7 +22,7 @@ export const LanguageSwitcher = () => {
       <DropdownMenuTrigger>
         <div className="flex items-center gap-2">
           <p className="text-white">Languages</p>
-          <Languages className={`h-4 w-4 ${pathname === '/' ? 'text-white' : ''}`} />
+          <Languages className="h-4 w-4 text-white" />
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
