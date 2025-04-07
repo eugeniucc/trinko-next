@@ -1,4 +1,6 @@
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
+'use client'
+
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '@/components/ui/sheet'
 import { Instagram, Menu, MessageCircleHeart, MessageCircleMore, PhoneOutgoing, Send } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -21,16 +23,18 @@ export const Hamburger = () => {
             <nav className="py-10">
               <ul className="flex flex-col gap-4">
                 <li>
-                  <Link
-                    href="/"
-                    className={`${
-                      pathname === '/'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Home
-                  </Link>
+                  <SheetClose>
+                    <Link
+                      href="/"
+                      className={`${
+                        pathname === '/'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Home
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
                   <Link

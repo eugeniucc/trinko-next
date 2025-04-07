@@ -10,6 +10,7 @@ import { AgeConfirm } from '@/app/components/AgeConfirm'
 import { HeaderContacts } from '@/app/ui/header/ui/HeaderContacts'
 import { HomeHeader } from '@/app/ui/header/HomeHeader'
 import { HomeFooter } from '@/app/ui/footer/HomeFooter'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import i18next from './i18n'
 import './globals.css'
@@ -60,6 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   const { t } = useTranslation()
+  const queryClient = new QueryClient()
 
   return (
     <html lang="ru">
@@ -94,7 +96,7 @@ export default function RootLayout({
           <AgeConfirm />
           <HeaderContacts />
           <HomeHeader />
-          {children}
+          <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
           <HomeFooter />
         </I18nextProvider>
       </body>
