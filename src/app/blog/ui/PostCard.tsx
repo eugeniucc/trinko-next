@@ -1,3 +1,3 @@
 export const PostCard = () => {
-  return <div>PostCard</div>
+  return <div>PostCards</div>
 }
