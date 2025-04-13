@@ -71,20 +71,36 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('openGraphTitle')} />
         <meta property="og:description" content={t('openGraphDescription')} />
+        <meta property="og:logo" content="/logo/icon.png" />
         <meta property="og:image" content="/logo/icon.png" />
         <meta property="og:url" content={t('openGraphUrl')} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="TrinkoTattoo" />
         <meta property="og:locale" content={i18next.language} />
+
+        {/* Facebook Meta Tags  */}
+        <meta property="og:url" content="https://trinko-next.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TrinkoTattoo - Профессиональные татуировки в Кишиневе" />
+        <meta property="og:description" content="Лучший тату-салон в Кишиневе. Уникальные татуировки от профессионалов." />
+        <meta property="og:image" content="https://trinko-next.vercel.app/logo/icon.png" />
+
+        {/* Twitter Meta Tags  */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={t('twitterTitle')} />
-        <meta name="twitter:description" content={t('twitterDescription')} />
-        <meta name="twitter:image" content="/logo/icon.png" />
-        <meta name="twitter:site" content="@TrinkoTattoo" />
-        <meta name="twitter:creator" content="@TrinkoTattoo" />
+        <meta property="twitter:domain" content="trinko-next.vercel.app" />
+        <meta property="twitter:url" content="https://trinko-next.vercel.app/" />
+        <meta name="twitter:title" content="TrinkoTattoo - Профессиональные татуировки в Кишиневе" />
+        <meta name="twitter:description" content="Лучший тату-салон в Кишиневе. Уникальные татуировки от профессионалов." />
+        <meta name="twitter:image" content="https://trinko-next.vercel.app/logo/icon.png" />
+
+        {/* Extra RealFavIcon Tags  */}
         <link rel="icon" href="/logo/favicon.ico" />
+        <link rel="icon" href="/logo/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/logo/favicon-96x96.png" type="image/png" sizes="96x96" />
+        <link rel="icon" href="/logo/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
         <link rel="manifest" href="/logo/manifest.json" />
+
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <title>{t('title')}</title>
