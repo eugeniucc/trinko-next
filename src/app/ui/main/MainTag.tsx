@@ -4,5 +4,5 @@ type Props = {
 }
 
 export const MainTag = ({ children, className }: Props) => {
-  return <main className={`flex flex-col ${className}`}>{children}</main>
+  return <main className={`flex flex-col ${className || ''}`}>{children}</main>
 }

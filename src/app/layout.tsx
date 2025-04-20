@@ -60,44 +60,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const queryClient = new QueryClient()
 
   return (
-    <html lang="ru">
+    <html lang={i18n.language} className="scroll-smooth">
       <head>
         <meta name="description" content={t('description')} />
         <meta name="keywords" content={t('keywords')} />
         <meta name="robots" content="index, follow" />
+
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={t('openGraphTitle')} />
         <meta property="og:description" content={t('openGraphDescription')} />
-        <meta property="og:logo" content="/logo/icon.png" />
-        <meta property="og:image" content="/logo/icon.png" />
+        <meta property="og:image" content="https://trinko-next.vercel.app/logo/icon.png" />
         <meta property="og:url" content={t('openGraphUrl')} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="TrinkoTattoo" />
         <meta property="og:locale" content={i18next.language} />
 
-        {/* Facebook Meta Tags  */}
-        <meta property="og:url" content="https://trinko-next.vercel.app/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="TrinkoTattoo - Профессиональные татуировки в Кишиневе" />
-        <meta property="og:description" content="Лучший тату-салон в Кишиневе. Уникальные татуировки от профессионалов." />
-        <meta property="og:image" content="https://trinko-next.vercel.app/logo/icon.png" />
-
-        {/* Twitter Meta Tags  */}
+        {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="trinko-next.vercel.app" />
         <meta property="twitter:url" content="https://trinko-next.vercel.app/" />
-        <meta name="twitter:title" content="TrinkoTattoo - Профессиональные татуировки в Кишиневе" />
-        <meta name="twitter:description" content="Лучший тату-салон в Кишиневе. Уникальные татуировки от профессионалов." />
+        <meta name="twitter:title" content={t('openGraphTitle')} />
+        <meta name="twitter:description" content={t('openGraphDescription')} />
         <meta name="twitter:image" content="https://trinko-next.vercel.app/logo/icon.png" />
 
-        {/* Extra RealFavIcon Tags  */}
+        {/* Extra RealFavIcon Tags */}
         <link rel="icon" href="/logo/favicon.ico" />
         <link rel="icon" href="/logo/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/logo/favicon-96x96.png" type="image/png" sizes="96x96" />
-        <link rel="icon" href="/logo/favicon.png" type="image/png" />
+        <link rel="icon" href="/logo/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
         <link rel="manifest" href="/logo/manifest.json" />
 

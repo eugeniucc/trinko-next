@@ -24,10 +24,10 @@ export const Advantages = () => {
       className="py-20 sm:py-30"
     >
       <Container>
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-4xl md:text-6xl">Our advantages</h2>
+              <h2 className="text-4xl lg:text-6xl">Our advantages</h2>
               <p className="text-lg font-semibold">
                 For over 10 years of constant improvement, we have become one of the most successful tattoo salons. Here’s why
                 people choose us.
@@ -39,7 +39,7 @@ export const Advantages = () => {
               </p>
               <div className="aspect-video overflow-hidden rounded-lg">
                 <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
-                  <source src="/videos/video1.mp4" type="video/mp4" />
+                  <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148088/1_dnbito.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -56,7 +56,7 @@ export const Advantages = () => {
           <motion.div className="flex flex-col gap-14">
             <div className="aspect-video overflow-hidden rounded-lg">
               <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
-                <source src="/videos/video2.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148087/3_opeqaw.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -73,7 +73,7 @@ export const Advantages = () => {
               className="aspect-video overflow-hidden rounded-lg"
             >
               <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
-                <source src="/videos/video3.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148087/2_lyk0z5.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </motion.div>

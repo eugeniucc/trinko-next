@@ -18,7 +18,7 @@ export const FewWords = () => {
     >
       <div className="absolute inset-0 z-0 bg-black opacity-30"></div>
       <Container>
-        <div className="z-1 py-30 sm:py-50">
+        <div className="z-1 py-30 sm:py-60">
           <div className="flex flex-col gap-6 sm:ml-auto sm:max-w-xl">
             <motion.h2
               className="text-5xl font-semibold text-white"

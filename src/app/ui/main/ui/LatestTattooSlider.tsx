@@ -58,7 +58,7 @@ const LatestTattooSlider = () => {
         speed={1000}
       >
         {images.map((img, index) => (
-          <SwiperSlide key={index} className="h-[380px]! w-[280px]! overflow-hidden rounded-xl md:h-[550px]! md:w-[650px]!">
+          <SwiperSlide key={index} className="h-[380px]! w-[280px]! overflow-hidden rounded-xl md:h-[750px]! md:w-[550px]!">
             <div className="group relative h-full w-full">
               <Image
                 src={img.src}

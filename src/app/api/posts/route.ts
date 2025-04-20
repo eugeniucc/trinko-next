@@ -9,6 +9,6 @@ export async function GET() {
     return NextResponse.json(posts)
   } catch (error) {
     console.log(error)
-    return NextResponse.json({ error: 'Ошибка при получении постов' }, { status: 500 })
+    return NextResponse.json({ error: 'Error fetching posts from database' }, { status: 500 })
   }
 }

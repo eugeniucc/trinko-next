@@ -25,6 +25,13 @@ export const Portfolio = () => {
   const [activeTab, setActiveTab] = useState('all')
   const galleryRef = useRef<HTMLDivElement>(null)
 
+  // const [currentPage, setCurrentPage] = useState(1)
+  // const itemsPerPage = 6
+
+  // useEffect(() => {
+  //   setCurrentPage(1)
+  // }, [activeTab])
+
   const categories = [
     { id: 'all', name: 'All' },
     { id: 'tattoo', name: 'Tattoo' },

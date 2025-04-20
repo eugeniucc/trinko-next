@@ -23,7 +23,7 @@ export const Hamburger = () => {
             <nav className="py-10">
               <ul className="flex flex-col gap-4">
                 <li>
-                  <SheetClose>
+                  <SheetClose asChild>
                     <Link
                       href="/"
                       className={`${
@@ -37,76 +37,88 @@ export const Hamburger = () => {
                   </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/about"
-                    className={`${
-                      pathname === '/about'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    About
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/about"
+                      className={`${
+                        pathname === '/about'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      About
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/services"
-                    className={`${
-                      pathname === '/services'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Services
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/services"
+                      className={`${
+                        pathname === '/services'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Services
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/gallery"
-                    className={`${
-                      pathname === '/gallery'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Gallery
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/gallery"
+                      className={`${
+                        pathname === '/gallery'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Gallery
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/blog"
-                    className={`${
-                      pathname === '/blog'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Blog
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/blog"
+                      className={`${
+                        pathname === '/blog'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Blog
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/course"
-                    className={`${
-                      pathname === '/course'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Course
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/course"
+                      className={`${
+                        pathname === '/course'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Course
+                    </Link>
+                  </SheetClose>
                 </li>
                 <li>
-                  <Link
-                    href="/contacts"
-                    className={`${
-                      pathname === '/contacts'
-                        ? 'border-b-1 border-red-500 font-bold text-red-500'
-                        : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
-                    }`}
-                  >
-                    Contacts
-                  </Link>
+                  <SheetClose asChild>
+                    <Link
+                      href="/contacts"
+                      className={`${
+                        pathname === '/contacts'
+                          ? 'border-b-1 border-red-500 font-bold text-red-500'
+                          : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
+                      }`}
+                    >
+                      Contacts
+                    </Link>
+                  </SheetClose>
                 </li>
               </ul>
             </nav>

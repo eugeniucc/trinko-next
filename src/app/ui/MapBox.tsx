@@ -83,7 +83,7 @@ export const MapBox = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="flex flex-col gap-4 px-4"
+        className="mt-10 flex flex-col gap-4 px-4"
       >
         <h2 className="text-center text-4xl">Tattoo Salon in Chisinau on the Map</h2>
         <div className="mx-auto mb-12 max-w-3xl text-center">
