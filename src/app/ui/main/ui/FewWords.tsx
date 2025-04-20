@@ -14,7 +14,7 @@ export const FewWords = () => {
   return (
     <section
       ref={ref}
-      className="relative bg-[url('/images/home/sections/fewWords/home-02.png')] bg-cover bg-center bg-no-repeat sm:bg-[url('/images/home/sections/fewWords/home-01-1920x662.jpg')]"
+      className="relative bg-[url('/images/home/sections/fewWords/1.webp')] bg-cover bg-center bg-no-repeat grayscale filter"
     >
       <div className="absolute inset-0 z-0 bg-black opacity-30"></div>
       <Container>

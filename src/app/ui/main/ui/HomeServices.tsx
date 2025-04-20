@@ -46,17 +46,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-b border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none"
           >
             <Image
-              src="/images/home/sections/services/icon-01-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-01-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold"> Tattooing</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
@@ -68,17 +68,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-b border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none md:border-x"
           >
             <Image
-              src="/images/home/sections/services/icon-02-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-02-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold"> Piercing</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
@@ -90,17 +90,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-b border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none"
           >
             <Image
-              src="/images/home/sections/services/icon-03-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-03-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold">Tattoo cover up</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
@@ -112,17 +112,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none"
           >
             <Image
-              src="/images/home/sections/services/icon-04-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-04-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold">Tattoo design</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
@@ -134,17 +134,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-y border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none md:border-x md:border-y-0"
           >
             <Image
-              src="/images/home/sections/services/icon-05-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-05-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold">Permanent makeup</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
@@ -156,17 +156,17 @@ export const HomeServices = () => {
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
           <Link
-            href="/"
+            href="/services"
             className="group relative flex flex-col items-center justify-center gap-6 border-black bg-zinc-100 p-6 text-center duration-300 hover:scale-105 hover:border-none"
           >
             <Image
-              src="/images/home/sections/services/icon-06-80x80.png"
-              alt="Service"
+              src="/images/home/sections/services/icon-06-80x80.webp"
+              alt="Услуги тату Кишинев"
               width={80}
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2>Tattooing</h2>
+            <h2 className="text-lg font-bold">Tattoo Correction</h2>
             <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>

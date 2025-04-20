@@ -7,8 +7,6 @@ import { usePosts } from './hooks/usePosts'
 export default function Blog() {
   const { data, isLoading } = usePosts()
 
-  console.log(data, isLoading)
-
   return (
     <MainTag className="bg-zinc-900">
       <div className="container mx-auto min-h-screen px-4">

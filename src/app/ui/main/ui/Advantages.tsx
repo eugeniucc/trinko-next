@@ -2,7 +2,6 @@
 
 import { Container } from '@/app/ui/Container'
 import { motion } from 'framer-motion'
-import { Quote } from 'lucide-react'
 import { useInView } from 'react-intersection-observer'
 
 export const Advantages = () => {
@@ -43,9 +42,8 @@ export const Advantages = () => {
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div className="relative flex justify-end py-10 text-left">
-                <Quote className="absolute top-0 left-0 h-30 w-30 text-stone-200" />
-                <p className="relative max-w-xl text-right text-lg font-semibold">
+              <div className="flex justify-end py-10 text-left">
+                <p className="max-w-xl text-right text-lg font-semibold">
                   Inkvo is a unique tattoo salon that offers a wide range of tattoo styles, colors, and designs. We are committed
                   to providing our clients with the best possible tattoo experience.
                 </p>

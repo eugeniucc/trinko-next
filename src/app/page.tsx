@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <HeroSlider />
       <MainTag>
-        <FewWords />
         <HomeServices />
+        <FewWords />
         <LatestTattoo />
         <Advantages />
         <Portfolio />

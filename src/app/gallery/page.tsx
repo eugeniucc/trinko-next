@@ -15,8 +15,6 @@ export default function Gallery() {
     queryFn: () => getSupabaseImages('gallery', page, 20)
   })
 
-  console.log(data)
-
   return (
     <MainTag className="bg-zinc-900">
       <div className="container mx-auto min-h-screen px-4">
@@ -27,7 +25,7 @@ export default function Gallery() {
             {isLoading
               ? Array.from({ length: 4 }).map((_, index) => <SkeletonLoader className="h-[460px]" key={index} />)
               : data?.map((url, index) => (
-                  <Image key={index} width={400} height={460} src={url} alt={`image-${index}`} className="rounded shadow-md" />
+                  <Image key={index} width={400} height={460} src={url} alt={'Тату Кишинев'} className="rounded shadow-md" />
                 ))}
           </div>
           <div className="mt-6 flex justify-center gap-4">
