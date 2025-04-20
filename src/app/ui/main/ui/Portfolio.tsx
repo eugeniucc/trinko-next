@@ -33,7 +33,7 @@ export const Portfolio = () => {
       lightbox = new PhotoSwipeLightbox({
         gallery: '#portfolio-gallery',
         children: 'a',
-        pswpModule: () => import('photoswipe')
+        pswpModule: () => import('photoswipe').then((mod) => mod)
       })
 
       lightbox.init()
