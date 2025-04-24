@@ -11,10 +11,18 @@ import { HomeFooter } from '@/app/ui/footer/HomeFooter'
 import { I18nextProvider } from 'react-i18next'
 import i18next from './i18n'
 import { TranslatedHead } from './TranslatedHead'
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 const queryClient = new QueryClient()
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <>
       <TranslatedHead />
