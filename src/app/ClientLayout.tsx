@@ -12,16 +12,22 @@ import { I18nextProvider } from 'react-i18next'
 import i18next from './i18n'
 import { TranslatedHead } from './TranslatedHead'
 import { useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 const queryClient = new QueryClient()
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    const handleRouteChange = () => {
+      window.scrollTo(0, 0)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   return (
     <>
