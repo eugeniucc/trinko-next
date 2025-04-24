@@ -132,6 +132,13 @@ exports.Prisma.MediaScalarFieldEnum = {
   postId: 'postId'
 };
 
+exports.Prisma.GalleryImageScalarFieldEnum = {
+  id: 'id',
+  fileName: 'fileName',
+  url: 'url',
+  createdAt: 'createdAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -145,7 +152,8 @@ exports.Prisma.QueryMode = {
 
 exports.Prisma.ModelName = {
   Post: 'Post',
-  Media: 'Media'
+  Media: 'Media',
+  GalleryImage: 'GalleryImage'
 };
 
 /**

@@ -1,13 +1,28 @@
 'use client'
 
 import { MapPin, Phone, Clock, Instagram, Facebook, Send, MessageCircleMore, MessageCircleHeart } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export const Contacts = () => {
   return (
     <section className="container mx-auto mb-20 px-4">
-      <h2 className="mb-8 text-4xl font-bold lg:text-6xl">Visit Our Studio</h2>
+      <motion.h2
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-8 text-4xl font-bold lg:text-6xl"
+      >
+        Visit Our Studio
+      </motion.h2>
 
-      <div className="rounded-lg bg-zinc-800 p-6">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="rounded-lg bg-zinc-800 p-6"
+      >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="space-y-6">
             <div className="flex items-start gap-4">
@@ -43,7 +58,13 @@ export const Contacts = () => {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-zinc-700 pt-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mt-8 border-t border-zinc-700 pt-6"
+        >
           <h3 className="mb-4 text-xl font-semibold text-white">Connect With Us</h3>
 
           <div className="flex flex-wrap gap-6">
@@ -88,8 +109,8 @@ export const Contacts = () => {
               <span>Viber</span>
             </a>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   )
 }

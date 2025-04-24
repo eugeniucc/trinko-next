@@ -71,7 +71,7 @@ export const Portfolio = () => {
                   key={index}
                   href={url}
                   className="relative w-full object-cover"
-                  data-pswp-width="1400"
+                  data-pswp-width="1200"
                   data-pswp-height="1600"
                   target="_blank"
                   rel="noreferrer"
