@@ -11,23 +11,17 @@ import { HomeFooter } from '@/app/ui/footer/HomeFooter'
 import { I18nextProvider } from 'react-i18next'
 import i18next from './i18n'
 import { TranslatedHead } from './TranslatedHead'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
+import { useLayoutEffect } from 'react'
 
 const queryClient = new QueryClient()
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  const router = useRouter()
+  const pathname = usePathname()
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      window.scrollTo(0, 0)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <>
