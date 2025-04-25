@@ -50,7 +50,7 @@ export const Contacts = () => {
               <div>
                 <h3 className="mb-2 text-xl font-semibold text-white">Phone</h3>
                 <a href="tel:+37360833389" className="text-white">
-                  <p className="text-lg text-white">+37360833389</p>
+                  <p className="text-lg text-white duration-200 hover:text-red-500">+37360833389</p>
                 </a>
                 <p className="mt-1 text-sm text-zinc-400">Available during working hours</p>
               </div>
