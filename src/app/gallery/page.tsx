@@ -54,7 +54,7 @@ export default function Gallery() {
       <div className="container mx-auto min-h-screen px-4">
         <div className="pt-35 pb-20 lg:pt-60">
           <CustomBreadcrumb />
-          <div id="portfolio-gallery" ref={galleryRef} className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-5">
+          <div id="portfolio-gallery" ref={galleryRef} className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
             {isLoading
               ? Array.from({ length: 10 }).map((_, index) => <SkeletonLoader key={index} className="h-96 w-full" />)
               : data?.images.map((img) => (

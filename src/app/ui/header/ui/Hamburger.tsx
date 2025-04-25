@@ -8,6 +8,10 @@ import { usePathname } from 'next/navigation'
 export const Hamburger = () => {
   const pathname = usePathname()
 
+  const handleScroll = () => {
+    window.scrollTo(0, 0)
+  }
+
   return (
     <div className="flex items-center lg:hidden">
       <Sheet>
@@ -26,6 +30,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -40,6 +45,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/about"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/about'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -54,6 +60,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/services"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/services'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -68,6 +75,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/gallery"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/gallery'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -82,6 +90,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/blog"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/blog'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -96,6 +105,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/course"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/course'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
@@ -110,6 +120,7 @@ export const Hamburger = () => {
                   <SheetClose asChild>
                     <Link
                       href="/contacts"
+                      onClick={handleScroll}
                       className={`${
                         pathname === '/contacts'
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
