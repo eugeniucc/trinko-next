@@ -37,7 +37,9 @@ export const CustomPagination = ({
             className={btnPrev}
             onClick={() => {
               onPageChange(Math.max(currentPage - 1, 1))
-              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setTimeout(() => {
+                window.scrollTo({ top: 0 })
+              }, 50)
             }}
           />
         </PaginationItem>
@@ -54,7 +56,9 @@ export const CustomPagination = ({
                   className={`${btnLink} ${isCurrent ? 'text-red-500' : ''}`}
                   onClick={() => {
                     onPageChange(pageNumber)
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0 })
+                    }, 50)
                   }}
                 >
                   {pageNumber}
@@ -78,7 +82,9 @@ export const CustomPagination = ({
             className={btnNext}
             onClick={() => {
               onPageChange(Math.min(currentPage + 1, totalPages || 1))
-              window.scrollTo({ top: 0, behavior: 'smooth' })
+              setTimeout(() => {
+                window.scrollTo({ top: 0 })
+              }, 50)
             }}
           />
         </PaginationItem>
