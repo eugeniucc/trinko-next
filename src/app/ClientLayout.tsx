@@ -3,7 +3,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
-// import { JivoChat } from '@/app/components/jivochat'
+import { JivoChat } from '@/app/components/jivochat'
 import { AgeConfirm } from '@/app/components/AgeConfirm'
 import { HeaderContacts } from '@/app/ui/header/ui/HeaderContacts'
 import { HomeHeader } from '@/app/ui/header/HomeHeader'
@@ -29,7 +29,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <I18nextProvider i18n={i18next}>
         <SpeedInsights />
         <Analytics />
-        {/* <JivoChat /> */}
+        <JivoChat />
         <AgeConfirm />
         <HeaderContacts />
         <HomeHeader />
