@@ -12,7 +12,6 @@ export const TranslatedHead = () => {
       <meta name="keywords" content={t('keywords')} />
       <meta name="robots" content="index, follow" />
 
-      {/* Open Graph Meta Tags */}
       <meta property="og:title" content={t('openGraphTitle')} />
       <meta property="og:description" content={t('openGraphDescription')} />
       <meta property="og:image" content="https://trinko-next.vercel.app/logo/icon.png" />
@@ -21,7 +20,6 @@ export const TranslatedHead = () => {
       <meta property="og:site_name" content="TrinkoTattoo" />
       <meta property="og:locale" content={i18n.language} />
 
-      {/* Twitter Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="trinko-next.vercel.app" />
       <meta property="twitter:url" content="https://trinko-next.vercel.app/" />

@@ -10,42 +10,42 @@ const services = [
     description:
       'High-quality custom tattoo art from our skilled artists. We create unique designs tailored to your personality.',
     icon: <PenTool className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   },
   {
     id: 2,
     title: 'Piercing',
     description: 'Professional body piercing services with sterile equipment and premium jewelry options.',
     icon: <Ear className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   },
   {
     id: 3,
     title: 'Tattoo Filling',
     description: 'Expert tattoo filling and recoloring services to refresh and revitalize your existing tattoos.',
     icon: <SprayCan className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   },
   {
     id: 4,
     title: 'Tattoo Design',
     description: 'Custom tattoo design services to bring your ideas to life before the inking process begins.',
     icon: <Palette className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   },
   {
     id: 5,
     title: 'Permanent Makeup',
     description: 'Semi-permanent cosmetic procedures including eyebrows, eyeliner, and lip blush.',
     icon: <Gem className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   },
   {
     id: 6,
     title: 'Tattoo Correction',
     description: 'Professional tattoo correction and cover-up services to fix or improve existing tattoos.',
     icon: <CheckCircle className="h-8 w-8 text-zinc-100" />,
-    image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80'
+    image: '/images/home/header/1.webp'
   }
 ]
 
