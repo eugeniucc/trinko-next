@@ -71,7 +71,7 @@ export const Contacts = () => {
             <a
               href="https://www.instagram.com/trinko_tattoo/"
               target="_blank"
-              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition hover:bg-red-600"
+              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition duration-200 hover:bg-red-600"
             >
               <Instagram className="h-5 w-5" />
               <span>Instagram</span>
@@ -79,7 +79,7 @@ export const Contacts = () => {
             <a
               href="https://facebook.com/trinkotattoo"
               target="_blank"
-              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition hover:bg-red-600"
+              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition duration-200 hover:bg-red-600"
             >
               <Facebook className="h-5 w-5" />
               <span>Facebook</span>
@@ -87,7 +87,7 @@ export const Contacts = () => {
             <a
               href="https://t.me/Trinkonfox"
               target="_blank"
-              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition hover:bg-red-600"
+              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition duration-200 hover:bg-red-600"
             >
               <Send className="h-5 w-5" />
               <span>Telegram</span>
@@ -95,7 +95,7 @@ export const Contacts = () => {
             <a
               href="https://wa.me/37360833389"
               target="_blank"
-              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition hover:bg-red-600"
+              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition duration-200 hover:bg-red-600"
             >
               <MessageCircleMore className="h-5 w-5" />
               <span>WhatsApp</span>
@@ -103,7 +103,7 @@ export const Contacts = () => {
             <a
               href="viber://chat?number=%2B37360833389"
               target="_blank"
-              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition hover:bg-red-600"
+              className="flex items-center gap-2 rounded-full bg-zinc-700 px-4 py-2 text-white transition duration-200 hover:bg-red-600"
             >
               <MessageCircleHeart className="h-5 w-5" />
               <span>Viber</span>

@@ -79,7 +79,18 @@ export const AllServicesCards = () => {
             <li>High-Quality Jewelry</li>
             <li>Experienced Piercing Specialists</li>
           </ul>
-          <Button className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white">Pricing</Button>
+          <Button
+            onClick={() => {
+              const el = document.getElementById('filling')
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 120
+                window.scrollTo({ top: y })
+              }
+            }}
+            className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
+          >
+            Pricing
+          </Button>
         </div>
       </motion.div>
 
@@ -114,7 +125,18 @@ export const AllServicesCards = () => {
             <li>Detailed Touch-Up Work</li>
             <li>Extends Tattoo Lifespan</li>
           </ul>
-          <Button className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white">Pricing</Button>
+          <Button
+            onClick={() => {
+              const el = document.getElementById('filling')
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 120
+                window.scrollTo({ top: y })
+              }
+            }}
+            className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
+          >
+            Pricing
+          </Button>
         </div>
       </motion.div>
 
@@ -149,7 +171,18 @@ export const AllServicesCards = () => {
             <li>Unique and Original Artwork</li>
             <li>Digital Preview Options</li>
           </ul>
-          <Button className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white">Pricing</Button>
+          <Button
+            onClick={() => {
+              const el = document.getElementById('design')
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 120
+                window.scrollTo({ top: y })
+              }
+            }}
+            className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
+          >
+            Pricing
+          </Button>
         </div>
       </motion.div>
 
@@ -182,7 +215,18 @@ export const AllServicesCards = () => {
             <li>Long-Lasting Results</li>
             <li>Professional Application</li>
           </ul>
-          <Button className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white">Pricing</Button>
+          <Button
+            onClick={() => {
+              const el = document.getElementById('permanent')
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 120
+                window.scrollTo({ top: y })
+              }
+            }}
+            className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
+          >
+            Pricing
+          </Button>
         </div>
       </motion.div>
 
@@ -217,7 +261,18 @@ export const AllServicesCards = () => {
             <li>Improve Existing Tattoos</li>
             <li>Consultation for Best Approach</li>
           </ul>
-          <Button className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white">Pricing</Button>
+          <Button
+            onClick={() => {
+              const el = document.getElementById('correction')
+              if (el) {
+                const y = el.getBoundingClientRect().top + window.scrollY - 120
+                window.scrollTo({ top: y })
+              }
+            }}
+            className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
+          >
+            Pricing
+          </Button>
         </div>
       </motion.div>
     </div>
