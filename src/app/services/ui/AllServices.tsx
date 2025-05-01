@@ -1,88 +1,59 @@
-import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
-import { Gem, Palette, SprayCan, Ear, PenTool, CheckCircle } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import Image from 'next/image'
+'use client'
 
-const services = [
-  {
-    id: 1,
-    title: 'Tattoo',
-    description:
-      'High-quality custom tattoo art from our skilled artists. We create unique designs tailored to your personality.',
-    icon: <PenTool className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  },
-  {
-    id: 2,
-    title: 'Piercing',
-    description: 'Professional body piercing services with sterile equipment and premium jewelry options.',
-    icon: <Ear className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  },
-  {
-    id: 3,
-    title: 'Tattoo Filling',
-    description: 'Expert tattoo filling and recoloring services to refresh and revitalize your existing tattoos.',
-    icon: <SprayCan className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  },
-  {
-    id: 4,
-    title: 'Tattoo Design',
-    description: 'Custom tattoo design services to bring your ideas to life before the inking process begins.',
-    icon: <Palette className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  },
-  {
-    id: 5,
-    title: 'Permanent Makeup',
-    description: 'Semi-permanent cosmetic procedures including eyebrows, eyeliner, and lip blush.',
-    icon: <Gem className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  },
-  {
-    id: 6,
-    title: 'Tattoo Correction',
-    description: 'Professional tattoo correction and cover-up services to fix or improve existing tattoos.',
-    icon: <CheckCircle className="h-8 w-8 text-zinc-100" />,
-    image: '/images/home/header/1.webp'
-  }
-]
+import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
+import { AllServicesCards } from './AllServicesCards'
+import { ServicesTattoo } from './sections/tattoo/ServicesTattoo'
+import { motion } from 'framer-motion'
+import { ServicesPiercing } from './sections/piercing/ServicesPiercing'
+import { ServicesFilling } from './sections/filling/ServicesFilling'
+import { ServicesDesign } from './sections/design/ServicesDesign'
+import { ServicesPermanent } from './sections/permanent/ServicesPermanent'
+import { ServicesCorrection } from './sections/correction/ServicesCorrection'
+import { AllServicesFaq } from './sections/AllServicesFaq'
 
 export const AllServices = () => {
   return (
-    <section className="bg-zinc-900">
-      <div className="container mx-auto min-h-screen px-4 py-35 lg:py-60">
-        <div className="mb-10">
-          <CustomBreadcrumb />
-        </div>
-        <div className="mb-16">
-          <h1 className="mb-4 text-4xl font-bold text-zinc-100 md:text-5xl">Our Services</h1>
-          <p className="text-lg text-zinc-400">
-            Professional tattoo and piercing services in Chisinau. We offer a wide range of body art solutions.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="overflow-hidden rounded-lg bg-zinc-800 shadow-lg transition-shadow duration-300 hover:shadow-xl"
+    <>
+      <section className="bg-zinc-900">
+        <div className="container mx-auto min-h-screen px-4 py-35 lg:pt-60 lg:pb-35">
+          <div className="mb-10">
+            <CustomBreadcrumb />
+          </div>
+          <div className="mb-16">
+            <motion.h1
+              className="mb-4 text-4xl font-bold text-white md:text-5xl"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0 }}
             >
-              <div className="h-48 overflow-hidden">
-                <Image src={service.image} alt={service.title} width={500} height={300} className="h-full w-full object-cover" />
-              </div>
-              <div className="p-6">
-                <div className="mb-4 flex items-center">
-                  <div className="mr-4 rounded-full bg-red-600 p-3">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-zinc-100">{service.title}</h3>
-                </div>
-                <p className="text-zinc-400">{service.description}</p>
-                <Button className="bbg-white mt-6 rounded-md px-6 py-2 transition-colors">Learn More</Button>
-              </div>
-            </div>
-          ))}
+              Tattoo Services in Chisinau: Find Your Perfect Ink
+            </motion.h1>
+            <motion.p
+              className="text-lg text-zinc-400"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Looking for exceptional tattoo services in Chisinau? Our studio offers a diverse range of tattooing styles and
+              techniques, delivered by experienced and passionate artists. Whether you&#39;re seeking your first piece or adding
+              to an existing collection, we&#39;re dedicated to providing you with high-quality, personalized body art in a safe
+              and comfortable environment. Explore our services below to discover how we can bring your vision to life.
+            </motion.p>
+          </div>
+          <AllServicesCards />
         </div>
+      </section>
+      <div className="container mx-auto px-4">
+        <ServicesTattoo />
+        <ServicesPiercing />
+        <ServicesFilling />
+        <ServicesDesign />
+        <ServicesPermanent />
+        <ServicesCorrection />
+        <AllServicesFaq />
       </div>
-    </section>
+    </>
   )
 }

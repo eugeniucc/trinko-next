@@ -6,7 +6,6 @@ import { Portfolio } from '@/app/ui/main/ui/Portfolio'
 import { FewWords } from '@/app/ui/main/ui/FewWords'
 import { HomeReviews } from '@/app/ui/main/ui/HomeReviews'
 import { MapBox } from '@/app/ui/MapBox'
-
 import { HeroSlider } from '@/app/ui/HeroSlider'
 
 export default function Home() {
