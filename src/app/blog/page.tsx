@@ -20,10 +20,10 @@ export default function Blog() {
   return (
     <MainTag className="bg-zinc-900">
       <div className="container mx-auto min-h-screen px-4">
-        <div className="pb-10 lg:pt-60">
+        <div className="pt-35 pb-10 lg:pt-60">
           <CustomBreadcrumb />
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
           {isLoading
             ? Array.from({ length: 5 }).map((_, index) => <SkeletonLoader className="h-[500px]" key={index} />)
             : data?.posts && data.posts.map((post) => <PostCard key={post.id} post={post} />)}

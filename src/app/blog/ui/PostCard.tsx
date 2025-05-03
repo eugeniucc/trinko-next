@@ -3,11 +3,15 @@ import Image from 'next/image'
 import parse from 'html-react-parser'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
+import { urlSlug } from '@/lib/urlSlug'
 
 export const PostCard = ({ post }: PostCardProps) => {
   const router = useRouter()
+
+  const slug = urlSlug(post.title)
+
   const handleClick = () => {
-    router.push(`/blog/${post.id}`)
+    router.push(`/blog/${post.id}/${slug}`)
   }
 
   return (
@@ -18,7 +22,7 @@ export const PostCard = ({ post }: PostCardProps) => {
           className="object-cover transition-transform duration-300 hover:scale-105"
           src={post.media[0].url}
           alt={post.title}
-          width={500}
+          width={700}
           height={500}
         />
       </div>

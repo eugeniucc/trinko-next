@@ -4,7 +4,7 @@ import parse from 'html-react-parser'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useQuery } from '@tanstack/react-query'
-import { getPostById } from '../api/getPostsById'
+import { getPostById } from '../../api/getPostsById'
 import { SkeletonLoader } from '@/app/ui/SkeletonLoader'
 
 export default function PostPage() {
