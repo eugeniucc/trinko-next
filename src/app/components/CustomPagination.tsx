@@ -34,13 +34,16 @@ export const CustomPagination = ({
       <PaginationContent className="flex justify-center gap-2">
         <PaginationItem>
           <PaginationPrevious
-            className={btnPrev}
+            className={`${btnPrev} ${currentPage === 1 ? 'cursor-not-allowed opacity-50' : ''}`}
             onClick={() => {
-              onPageChange(Math.max(currentPage - 1, 1))
-              setTimeout(() => {
-                window.scrollTo({ top: 0 })
-              }, 50)
+              if (currentPage > 1) {
+                onPageChange(Math.max(currentPage - 1, 1))
+                setTimeout(() => {
+                  window.scrollTo({ top: 0 })
+                }, 50)
+              }
             }}
+            aria-disabled={currentPage === 1}
           />
         </PaginationItem>
         {Array.from({ length: totalPages || 1 }).map((_, i) => {
@@ -79,13 +82,16 @@ export const CustomPagination = ({
         })}
         <PaginationItem>
           <PaginationNext
-            className={btnNext}
+            className={`${btnNext} ${currentPage === totalPages ? 'cursor-not-allowed opacity-50' : ''}`}
             onClick={() => {
-              onPageChange(Math.min(currentPage + 1, totalPages || 1))
-              setTimeout(() => {
-                window.scrollTo({ top: 0 })
-              }, 50)
+              if (currentPage < totalPages) {
+                onPageChange(Math.min(currentPage + 1, totalPages || 1))
+                setTimeout(() => {
+                  window.scrollTo({ top: 0 })
+                }, 50)
+              }
             }}
+            aria-disabled={currentPage === totalPages}
           />
         </PaginationItem>
       </PaginationContent>

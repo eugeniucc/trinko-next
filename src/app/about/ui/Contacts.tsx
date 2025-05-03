@@ -2,8 +2,13 @@
 
 import { MapPin, Phone, Clock, Instagram, Facebook, Send, MessageCircleMore, MessageCircleHeart } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { cn } from '@/lib/utils'
 
-export const Contacts = () => {
+type Props = {
+  titleColor?: string
+}
+
+export const Contacts = ({ titleColor }: Props) => {
   return (
     <section className="container mx-auto mb-20 px-4">
       <motion.h2
@@ -11,7 +16,7 @@ export const Contacts = () => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="mb-8 text-4xl font-bold lg:text-6xl"
+        className={cn('mb-8 text-4xl font-bold lg:text-6xl', titleColor)}
       >
         Visit Our Studio
       </motion.h2>

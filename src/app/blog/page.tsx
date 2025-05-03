@@ -23,9 +23,9 @@ export default function Blog() {
         <div className="pt-35 pb-10 lg:pt-60">
           <CustomBreadcrumb />
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {isLoading
-            ? Array.from({ length: 5 }).map((_, index) => <SkeletonLoader className="h-[500px]" key={index} />)
+            ? Array.from({ length: 4 }).map((_, index) => <SkeletonLoader className="h-[500px]" key={index} />)
             : data?.posts && data.posts.map((post) => <PostCard key={post.id} post={post} />)}
         </div>
       </div>

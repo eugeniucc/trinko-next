@@ -12,7 +12,7 @@ export default function PostPage() {
   const post = String(id)
 
   const { data, isLoading } = useQuery({
-    queryKey: ['data', id],
+    queryKey: ['data', post],
     queryFn: () => getPostById(post)
   })
 
