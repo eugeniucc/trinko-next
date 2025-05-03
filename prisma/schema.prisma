@@ -7,7 +7,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./generated/prisma"
+  output   = "../node_modules/.prisma/client"
 }
 
 datasource db {
@@ -28,8 +28,6 @@ model Post {
 model Media {
   id        Int      @id @default(autoincrement())
   url       String
-  type      String   
-  createdAt DateTime @default(now())
   postId    Int
   post      Post     @relation(fields: [postId], references: [id])  
 }

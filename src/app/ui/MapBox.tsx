@@ -57,18 +57,22 @@ export const MapBox = () => {
       .addTo(map)
 
     map.on('load', () => {
-      map.addLayer({
-        id: '3d-buildings',
-        source: 'composite',
-        'source-layer': 'building',
-        type: 'fill-extrusion',
-        paint: {
-          'fill-extrusion-color': '#ddd',
-          'fill-extrusion-height': ['get', 'height'],
-          'fill-extrusion-base': ['get', 'min_height'],
-          'fill-extrusion-opacity': 0.6
-        }
-      })
+      if (map.getSource('composite')) {
+        map.addLayer({
+          id: '3d-buildings',
+          source: 'composite',
+          'source-layer': 'building',
+          type: 'fill-extrusion',
+          paint: {
+            'fill-extrusion-color': '#ddd',
+            'fill-extrusion-height': ['get', 'height'],
+            'fill-extrusion-base': ['get', 'min_height'],
+            'fill-extrusion-opacity': 0.6
+          }
+        })
+      } else {
+        console.warn('Failed styles mapbox')
+      }
     })
 
     return () => {

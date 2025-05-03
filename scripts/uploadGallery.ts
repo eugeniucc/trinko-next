@@ -49,11 +49,7 @@ async function main() {
         url
       }
     })
-
-    console.log(`✔ Saved ${fileName}`)
   }
-
-  console.log('✅ All done')
 }
 
 main()
