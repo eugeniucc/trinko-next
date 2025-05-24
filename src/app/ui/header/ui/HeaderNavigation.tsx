@@ -62,7 +62,7 @@ export const HeaderNavigation = () => {
           <Link
             href="/blog"
             className={`${
-              pathname === '/blog'
+              pathname.startsWith('/blog')
                 ? 'border-b-1 border-red-500 pb-1 text-red-500'
                 : "relative pb-1 text-white after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
             }`}

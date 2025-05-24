@@ -7,6 +7,7 @@ import { FewWords } from '@/app/ui/main/ui/FewWords'
 import { HomeReviews } from '@/app/ui/main/ui/HomeReviews'
 import { MapBox } from '@/app/ui/MapBox'
 import { HeroSlider } from '@/app/ui/HeroSlider'
+import { MapBoxContent } from '@/app/ui/main/ui/MapBoxContent'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Advantages />
         <Portfolio />
         <HomeReviews />
+        <MapBoxContent />
         <MapBox />
       </MainTag>
     </>

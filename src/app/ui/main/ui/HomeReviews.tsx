@@ -39,7 +39,7 @@ export const HomeReviews = () => {
   ]
 
   return (
-    <section className="my-10 bg-zinc-800">
+    <section className="mt-10 bg-zinc-800">
       <Container>
         <div className="grid grid-cols-1 gap-10 py-10 lg:grid-cols-2">
           <motion.div

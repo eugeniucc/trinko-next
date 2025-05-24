@@ -16,8 +16,8 @@ export const PostCard = ({ post }: PostCardProps) => {
 
   return (
     <div className="flex flex-col gap-5 overflow-hidden rounded-xl bg-gradient-to-br from-gray-500 to-gray-800 p-4 shadow-lg">
-      <h2 className="text-2xl font-bold tracking-tight text-white">{post.title}</h2>
-      <div onClick={handleClick} className="relative aspect-square w-full cursor-pointer overflow-hidden rounded-md shadow-md">
+      <h2 className="text-center text-2xl font-bold tracking-tight text-white">{post.title}</h2>
+      <div onClick={handleClick} className="aspect-auto cursor-pointer overflow-hidden rounded-md">
         <Image
           className="object-cover transition-transform duration-300 hover:scale-105"
           src={post.media[0].url}

@@ -37,7 +37,7 @@ export const HeroSlider = () => {
               }}
             ></div>
             <div className="absolute inset-0 bg-black/50"></div>
-            <div className="absolute top-[55%] left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
+            <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
                 Reliable & Affordable
               </h2>
@@ -63,7 +63,7 @@ export const HeroSlider = () => {
               }}
             ></div>
             <div className="absolute inset-0 bg-black/50"></div>
-            <div className="absolute top-[55%] left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
+            <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
                 Creative & Unique
               </h2>
@@ -89,7 +89,7 @@ export const HeroSlider = () => {
               }}
             ></div>
             <div className="absolute inset-0 bg-black/50"></div>
-            <div className="absolute top-[55%] left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
+            <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
                 Top-notch Professionals
               </h2>

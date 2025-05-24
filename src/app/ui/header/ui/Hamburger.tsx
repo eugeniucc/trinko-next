@@ -92,7 +92,7 @@ export const Hamburger = () => {
                       href="/blog"
                       onClick={handleScroll}
                       className={`${
-                        pathname === '/blog'
+                        pathname.startsWith('/blog')
                           ? 'border-b-1 border-red-500 font-bold text-red-500'
                           : "relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-red-500 after:duration-300 after:content-[''] hover:after:w-full"
                       }`}
