@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const TattooIntro = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col gap-4">
       <motion.h2
@@ -10,7 +13,7 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0 }}
         viewport={{ once: true }}
       >
-        Tattoo Services in Chisinau
+        {t('servicesPage.sections.tattoo.title')}
       </motion.h2>
       <motion.p
         className="text-black"
@@ -19,9 +22,16 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        At our studio in Chisinau, we adhere to the highest standards of hygiene and safety. We use only sterilized equipment and
-        disposable materials to ensure your well-being and peace of mind. Our tattoo artists undergo thorough training and possess
-        extensive experience, guaranteeing the high quality of every tattoo we create.
+        {t('servicesPage.sections.tattoo.subtitle')}
+      </motion.p>
+      <motion.p
+        className="text-black"
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        viewport={{ once: true }}
+      >
+        {t('servicesPage.sections.tattoo.text')}
       </motion.p>
     </div>
   )

@@ -5,6 +5,7 @@ import { MapBox } from '../ui/MapBox'
 import { MapBoxContacts } from './ui/MapBoxContacts'
 import { ContactFaq } from './ui/ContactFaq'
 import { ContactAction } from './ui/ContactAction'
+import { ContactsSection } from '../about/ui/ContactsSection'
 
 export default function Contacts() {
   return (
@@ -14,6 +15,7 @@ export default function Contacts() {
           <CustomBreadcrumb />
         </div>
         <ContactPackage />
+        <ContactsSection titleColor="text-white lg:text-4xl" className="mb-0 p-0" />
         <MapBoxContacts />
         <MapBox />
         <ContactFaq />

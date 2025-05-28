@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const TattooIntro = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col gap-4">
       <motion.h2
@@ -10,7 +13,7 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0 }}
         viewport={{ once: true }}
       >
-        Tattoo Correction Services in Chisinau
+        {t('servicesPage.sections.correction.title')}
       </motion.h2>
       <motion.p
         className="text-black"
@@ -19,9 +22,7 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        Whether you&#39;re looking to fix a faded tattoo or cover up an unwanted design, our tattoo correction services in
-        Chisinau offer expert solutions. Our artists work with precision and care to transform old ink into refreshed, meaningful
-        artwork you&#39;ll love to wear.
+        {t('servicesPage.sections.correction.text')}
       </motion.p>
     </div>
   )

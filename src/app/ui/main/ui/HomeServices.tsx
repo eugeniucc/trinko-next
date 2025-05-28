@@ -6,8 +6,11 @@ import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import { SquareArrowOutUpRight } from 'lucide-react'
+import { useTranslation } from 'next-i18next'
 
 export const HomeServices = () => {
+  const { t } = useTranslation()
+
   const [ref1, inView1] = useInView({
     triggerOnce: true,
     threshold: 0.5
@@ -26,7 +29,7 @@ export const HomeServices = () => {
           animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          Our Services
+          {t('homePage.ourServicesSection.title')}
         </motion.h2>
         <motion.p
           className="mx-auto max-w-xl text-center"
@@ -34,8 +37,7 @@ export const HomeServices = () => {
           animate={{ opacity: inView1 ? 1 : 0, y: inView1 ? 0 : 50 }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
         >
-          We provide a wide variety of tattooing services to both regular and new clients. At Inkvo, you can expect first-class
-          treatment as well as 100% safe and sterile environment & equipment.
+          {t('homePage.ourServicesSection.subtitle')}
         </motion.p>
       </div>
 
@@ -56,8 +58,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold"> Tattooing</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.tattooing.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.tattooing.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>
@@ -78,8 +80,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold"> Piercing</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.piercing.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.piercing.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>
@@ -100,8 +102,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold">Tattoo cover up</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.coverup.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.coverup.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>
@@ -122,8 +124,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold">Tattoo design</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.design.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.design.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>
@@ -144,8 +146,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold">Permanent makeup</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.makeup.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.makeup.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>
@@ -166,8 +168,8 @@ export const HomeServices = () => {
               height={80}
               className="transition-transform duration-600 group-hover:rotate-45"
             />
-            <h2 className="text-lg font-bold">Tattoo Correction</h2>
-            <p>At our tattoo salon, we combine modern technics with traditional ones for a premium result.</p>
+            <h2 className="text-lg font-bold">{t('homePage.ourServicesSection.services.correction.title')}</h2>
+            <p>{t('homePage.ourServicesSection.services.correction.text')}</p>
             <SquareArrowOutUpRight className="absolute top-4 right-6 h-4 w-4 duration-900 group-hover:rotate-360" />
           </Link>
         </motion.div>

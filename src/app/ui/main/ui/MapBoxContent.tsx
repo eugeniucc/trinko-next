@@ -1,8 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const MapBoxContent = () => {
+  const { t } = useTranslation()
+
   return (
     <section>
       <motion.div
@@ -12,14 +15,11 @@ export const MapBoxContent = () => {
         viewport={{ once: true }}
         className="mt-10 flex flex-col gap-4 px-4"
       >
-        <h2 className="text-center text-4xl">Tattoo Salon in Chisinau on the Map</h2>
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <p>Looking for the best tattoo salon in Chisinau? Visit Trinkotattoo, located right in the heart of the city.</p>
-          <p>
-            Our talented artists have years of experience and are ready to bring any of your tattoo ideas to life. Whether you’re
-            looking for a small, intricate design or a full sleeve, we offer custom tattoos tailored to your style. We prioritize
-            cleanliness, safety, and comfort, ensuring you have a memorable experience.
-          </p>
+        <h2 className="mb-4 text-center text-4xl">{t('homePage.mapBoxContent.title')}</h2>
+        <div className="mx-auto mb-12 flex max-w-3xl flex-col gap-4 text-center">
+          <p>{t('homePage.mapBoxContent.subtitle')}</p>
+          <p className="text-lg font-bold">{t('homePage.mapBoxContent.text')}</p>
+          <p>{t('homePage.mapBoxContent.description')}</p>
         </div>
       </motion.div>
     </section>

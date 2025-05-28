@@ -1,63 +1,54 @@
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
 export const TattooPricing = () => {
+  const { t } = useTranslation()
+
+  const listItems = t('servicesPage.sections.design.pricing.items', { returnObjects: true }) as {
+    title: string
+    name: string
+    price: string
+    text: string
+  }[]
+
   return (
-    <div className="grid grid-cols-1 gap-10 lg:gap-20 xl:grid-cols-2">
-      <motion.div
-        className="flex flex-col items-center justify-between gap-6 sm:flex-row"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0 }}
-      >
-        <div className="flex flex-col items-center gap-1 sm:items-start">
-          <h2 className="text-center text-3xl font-bold sm:text-start md:text-4xl">Custom Tattoo Design</h2>
-          <p className="text-gray-400">1–2 hours</p>
-        </div>
-        <p className="text-3xl font-bold md:text-4xl">600 lei</p>
-      </motion.div>
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
+      {listItems.map((item, index) => (
+        <motion.div
+          key={index}
+          className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-4 shadow-lg transition-all hover:shadow-xl dark:border-gray-700 dark:bg-gray-800"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+        >
+          <div className="dark:bg-red-50-900 absolute top-4 right-4 h-12 w-12 rounded-full bg-indigo-100 opacity-20 group-hover:opacity-30" />
 
-      <motion.div
-        className="flex flex-col items-center justify-between gap-6 sm:flex-row"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        <div className="flex flex-col items-center gap-1 sm:items-start">
-          <h2 className="text-center text-3xl font-bold sm:text-start md:text-4xl">Traditional Tattoo Design</h2>
-          <p className="text-gray-400">2–3 hours</p>
-        </div>
-        <p className="text-3xl font-bold md:text-4xl">800 lei</p>
-      </motion.div>
+          <div className="relative z-10 flex h-full flex-col items-center justify-between gap-4 text-center sm:items-start sm:text-left">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{item.title}</h3>
 
-      <motion.div
-        className="flex flex-col items-center justify-between gap-6 sm:flex-row"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        <div className="flex flex-col items-center gap-1 sm:items-start">
-          <h2 className="text-center text-3xl font-bold sm:text-start md:text-4xl">Modern Tattoo Design</h2>
-          <p className="text-gray-400">1.5–2.5 hours</p>
-        </div>
-        <p className="text-3xl font-bold md:text-4xl">700 lei</p>
-      </motion.div>
+            {item.name && (
+              <div className="flex items-center justify-between gap-2">
+                <svg className="h-5 w-5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                <span className="text-gray-600 dark:text-gray-300">{item.name}</span>
+              </div>
+            )}
 
-      <motion.div
-        className="flex flex-col items-center justify-between gap-6 sm:flex-row"
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        <div className="flex flex-col items-center gap-1 sm:items-start">
-          <h2 className="text-center text-3xl font-bold sm:text-start md:text-4xl">Geometric Tattoo Design</h2>
-          <p className="text-gray-400">1–2 hours</p>
-        </div>
-        <p className="text-3xl font-bold md:text-4xl">650 lei</p>
-      </motion.div>
+            <div className="flex w-full flex-col items-center gap-4 sm:items-start lg:flex-row lg:justify-between">
+              <span className="text-3xl font-bold text-gray-900 dark:text-white">{item.price}</span>
+              <Link
+                href="#"
+                className="w-fit rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-red-700 focus:outline-none dark:bg-red-500 dark:hover:bg-red-600"
+              >
+                {item.text}
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+      ))}
     </div>
   )
 }

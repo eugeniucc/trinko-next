@@ -1,7 +1,7 @@
 import { MainTag } from '@/app/ui/main/MainTag'
 import { Artists } from './ui/Artists'
 import { Hero } from './ui/Hero'
-import { Contacts } from './ui/Contacts'
+import { ContactsSection } from './ui/ContactsSection'
 import { FaqAccordion } from './ui/FaqAccordion'
 
 export default function About() {
@@ -9,7 +9,7 @@ export default function About() {
     <MainTag>
       <Hero />
       <Artists />
-      <Contacts />
+      <ContactsSection />
       <FaqAccordion />
     </MainTag>
   )

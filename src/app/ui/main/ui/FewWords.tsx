@@ -4,12 +4,15 @@ import { Container } from '@/app/ui/Container'
 import { CustomLink } from '@/app/ui/CustomLink'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import { useTranslation } from 'next-i18next'
 
 export const FewWords = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.6
   })
+
+  const { t } = useTranslation()
 
   return (
     <section
@@ -26,7 +29,7 @@ export const FewWords = () => {
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
               transition={{ duration: 0.7, ease: 'easeOut' }}
             >
-              A few words about our tattoo salon
+              {t('homePage.fewWords.title')}
             </motion.h2>
 
             <motion.p
@@ -35,7 +38,7 @@ export const FewWords = () => {
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
             >
-              We have been numerously recognized as #1 tattoo salon in Los Angeles. We aim to deliver the best tattooing services.
+              {t('homePage.fewWords.subtitle')}
             </motion.p>
 
             <motion.p
@@ -44,8 +47,7 @@ export const FewWords = () => {
               animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 50 }}
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
             >
-              Our staff consistently upgrades their ability and knowledge through training and seminars to ensure your tattoo or
-              piercing is performed using the latest industry standards.
+              {t('homePage.fewWords.text')}
             </motion.p>
 
             <motion.p

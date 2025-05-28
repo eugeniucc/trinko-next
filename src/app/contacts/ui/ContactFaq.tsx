@@ -10,7 +10,7 @@ export const ContactFaq = () => {
 
   return (
     <section ref={sectionRef} className="text-white">
-      <h2 className="mb-6 text-4xl font-bold lg:text-6xl">Frequently Asked Questions</h2>
+      <h2 className="mb-6 text-4xl font-bold">Frequently Asked Questions</h2>
       <Accordion type="single" collapsible className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

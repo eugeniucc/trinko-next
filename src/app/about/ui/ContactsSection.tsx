@@ -6,11 +6,12 @@ import { cn } from '@/lib/utils'
 
 type Props = {
   titleColor?: string
+  className?: string
 }
 
-export const Contacts = ({ titleColor }: Props) => {
+export const ContactsSection = ({ titleColor, className }: Props) => {
   return (
-    <section className="container mx-auto mb-20 px-4">
+    <section className={cn('container mx-auto mb-20 px-4', className)}>
       <motion.h2
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}

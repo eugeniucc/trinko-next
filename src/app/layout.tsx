@@ -45,7 +45,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <head>
         <link rel="icon" href="/logo/favicon.ico" />
         <link rel="icon" href="/logo/favicon.svg" type="image/svg+xml" />

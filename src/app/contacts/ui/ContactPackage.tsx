@@ -12,7 +12,7 @@ export const ContactPackage = () => {
       className="flex w-fit flex-col gap-4 rounded-lg bg-zinc-800 p-4 sm:p-6"
     >
       <div className="flex flex-col gap-6">
-        <h1 className="text-4xl font-bold text-white md:text-5xl">Contact Our Tattoo Studio</h1>
+        <h1 className="text-4xl font-bold text-white">Contact Our Tattoo Studio</h1>
         <p className="max-w-3xl text-lg text-gray-300">
           Have questions about our services or ready to book your appointment? Get in touch with our team of professional tattoo
           artists in Chisinau. We&#39;re here to help bring your tattoo ideas to life.

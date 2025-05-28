@@ -4,8 +4,11 @@ import { Gem, Palette, SprayCan, Ear, PenTool, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const AllServicesCards = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
       <motion.div
@@ -23,15 +26,13 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <PenTool className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Tattoo</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.tattoo.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">
-            High-quality custom tattoo art from our skilled artists. We create unique designs tailored to your personality.
-          </p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.tattoo.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Custom Design Expertise</li>
-            <li>Wide Range of Styles</li>
-            <li>Sterile and Safe Process</li>
+            {(t('servicesPage.cards.tattoo.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+              <li key={index}>{step}</li>
+            ))}
           </ul>
           <Button
             onClick={() => {
@@ -43,7 +44,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.tattoo.pricing')}
           </Button>
         </div>
       </motion.div>
@@ -69,19 +70,17 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <Ear className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Piercing</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.piercing.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">
-            Professional body piercing services with sterile equipment and premium jewelry options.
-          </p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.piercing.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Variety of Piercing Options</li>
-            <li>High-Quality Jewelry</li>
-            <li>Experienced Piercing Specialists</li>
+            {(t('servicesPage.cards.piercing.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+              <li key={index}>{step}</li>
+            ))}
           </ul>
           <Button
             onClick={() => {
-              const el = document.getElementById('filling')
+              const el = document.getElementById('piercing')
               if (el) {
                 const y = el.getBoundingClientRect().top + window.scrollY - 120
                 window.scrollTo({ top: y })
@@ -89,7 +88,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.piercing.pricing')}
           </Button>
         </div>
       </motion.div>
@@ -115,19 +114,17 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <SprayCan className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Tattoo Filling</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.coverup.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">
-            Expert tattoo filling and recoloring services to refresh and revitalize your existing tattoos.
-          </p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.coverup.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Color Boost and Refresh</li>
-            <li>Detailed Touch-Up Work</li>
-            <li>Extends Tattoo Lifespan</li>
+            {(t('servicesPage.cards.coverup.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+              <li key={index}>{step}</li>
+            ))}
           </ul>
           <Button
             onClick={() => {
-              const el = document.getElementById('filling')
+              const el = document.getElementById('correction')
               if (el) {
                 const y = el.getBoundingClientRect().top + window.scrollY - 120
                 window.scrollTo({ top: y })
@@ -135,7 +132,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.coverup.pricing')}
           </Button>
         </div>
       </motion.div>
@@ -161,15 +158,13 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <Palette className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Tattoo Design</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.design.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">
-            Custom tattoo design services to bring your ideas to life before the inking process begins.
-          </p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.design.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Personalized Consultations</li>
-            <li>Unique and Original Artwork</li>
-            <li>Digital Preview Options</li>
+            {(t('servicesPage.cards.design.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+              <li key={index}>{step}</li>
+            ))}
           </ul>
           <Button
             onClick={() => {
@@ -181,7 +176,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.design.pricing')}
           </Button>
         </div>
       </motion.div>
@@ -207,13 +202,13 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <Gem className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Permanent Makeup</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.permanent.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">Semi-permanent cosmetic procedures including eyebrows, eyeliner, and lip blush.</p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.permanent.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Enhance Natural Features</li>
-            <li>Long-Lasting Results</li>
-            <li>Professional Application</li>
+            {(t('servicesPage.cards.permanent.steps', { returnObjects: true }) as string[]).map((step: string, index: number) => (
+              <li key={index}>{step}</li>
+            ))}
           </ul>
           <Button
             onClick={() => {
@@ -225,7 +220,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.permanent.pricing')}
           </Button>
         </div>
       </motion.div>
@@ -251,15 +246,15 @@ export const AllServicesCards = () => {
             <div className="mr-4 rounded-full bg-red-600 p-3">
               <CheckCircle className="h-8 w-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-white">Tattoo Correction</h3>
+            <h3 className="text-xl font-semibold text-white">{t('servicesPage.cards.correction.title')}</h3>
           </div>
-          <p className="mb-3 text-zinc-400">
-            Professional tattoo correction and cover-up services to fix or improve existing tattoos.
-          </p>
+          <p className="mb-3 text-zinc-400">{t('servicesPage.cards.correction.text')}</p>
           <ul className="mb-4 list-inside list-disc text-zinc-400">
-            <li>Expert Cover-Up Techniques</li>
-            <li>Improve Existing Tattoos</li>
-            <li>Consultation for Best Approach</li>
+            {(t('servicesPage.cards.correction.steps', { returnObjects: true }) as string[]).map(
+              (step: string, index: number) => (
+                <li key={index}>{step}</li>
+              )
+            )}
           </ul>
           <Button
             onClick={() => {
@@ -271,7 +266,7 @@ export const AllServicesCards = () => {
             }}
             className="mt-auto rounded-md bg-white px-6 py-2 text-black transition-colors hover:text-white"
           >
-            Pricing
+            {t('servicesPage.cards.correction.pricing')}
           </Button>
         </div>
       </motion.div>

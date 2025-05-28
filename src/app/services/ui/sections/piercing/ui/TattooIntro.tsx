@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 export const TattooIntro = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="flex flex-col gap-4">
       <motion.h2
@@ -10,7 +13,7 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0 }}
         viewport={{ once: true }}
       >
-        Professional Piercing Services in Chisinau
+        {t('servicesPage.sections.piercing.title')}
       </motion.h2>
       <motion.p
         className="text-black"
@@ -19,9 +22,7 @@ export const TattooIntro = () => {
         transition={{ duration: 0.5, delay: 0.1 }}
         viewport={{ once: true }}
       >
-        Our Chisinau studio offers expert body piercing services in a clean, comfortable, and professional environment. We
-        prioritize your safety by using sterile techniques and top-quality materials. From ear and nose to more advanced
-        piercings, our skilled staff ensures a safe and stylish experience tailored to your preferences.
+        {t('servicesPage.sections.piercing.text')}
       </motion.p>
     </div>
   )

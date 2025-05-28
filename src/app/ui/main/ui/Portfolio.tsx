@@ -11,6 +11,7 @@ import { useQuery } from '@tanstack/react-query'
 import { SkeletonLoader } from '@/app/ui/SkeletonLoader'
 import { ScanSearch } from 'lucide-react'
 import { CustomLink } from '@/app/ui/CustomLink'
+import { useTranslation } from 'react-i18next'
 
 interface ImportMeta {
   webpackHot?: {
@@ -47,6 +48,8 @@ export const Portfolio = () => {
     }
   }, [])
 
+  const { t } = useTranslation()
+
   return (
     <Container>
       <section className="py-20">
@@ -56,11 +59,8 @@ export const Portfolio = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-center text-4xl md:text-6xl">Our Portfolio</h1>
-          <p className="mx-auto my-12 max-w-3xl text-center">
-            Our salon provides tattoos of various complexity. From simple to highly creative artworks, we gather all our
-            achievements in the portfolio. Feel free to take a look at the gallery below to discover our best works.
-          </p>
+          <h1 className="text-center text-4xl md:text-6xl">{t('homePage.ourPortfolio.title')}</h1>
+          <p className="mx-auto my-12 max-w-3xl text-center">{t('homePage.ourPortfolio.text')}</p>
         </motion.div>
 
         <div id="portfolio-gallery" ref={galleryRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

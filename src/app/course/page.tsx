@@ -3,7 +3,7 @@ import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
 import { PricingSection } from './ui/PricingSection'
 import { HeroSection } from './ui/HeroSection'
 import { FaqSection } from './ui/FaqSection'
-import { Contacts } from '../about/ui/Contacts'
+import { ContactsSection } from '../about/ui/ContactsSection'
 
 export default function Course() {
   return (
@@ -16,7 +16,7 @@ export default function Course() {
         <PricingSection />
         <FaqSection />
       </div>
-      <Contacts titleColor="text-white" />
+      <ContactsSection titleColor="text-white" />
     </MainTag>
   )
 }
