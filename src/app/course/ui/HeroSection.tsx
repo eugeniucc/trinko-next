@@ -24,7 +24,7 @@ export const HeroSection = () => {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <motion.h1
-          className="text-4xl font-bold break-all md:text-5xl"
+          className="text-4xl font-bold break-words md:text-5xl"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -49,7 +49,7 @@ export const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-xl font-semibold">
-            {t('coursePage.heroSection.subscribe')}: {getNextCourseDate()}
+            {t('coursePage.heroSection.subscribe')} : <span className="block">{getNextCourseDate()}</span>
           </p>
           <Link
             className="mr-auto rounded-lg bg-white px-8 py-3 font-medium text-black transition duration-200 hover:bg-zinc-900 hover:text-white"

@@ -24,7 +24,7 @@ const jsonLd = {
   image: '/logo/icon.png',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+37360833389',
+    telephone: '+37379146506',
     contactType: 'customer service'
   },
   sameAs: ['https://www.instagram.com/trinko_tattoo/', 'https://t.me/Trinkonfox'],

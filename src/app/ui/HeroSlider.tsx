@@ -8,8 +8,11 @@ import 'swiper/css/pagination'
 import { EffectFade, Autoplay, Pagination, Parallax, Navigation } from 'swiper/modules'
 import { CustomLink } from '@/app/ui/CustomLink'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 
 export const HeroSlider = () => {
+  const { t } = useTranslation()
+
   return (
     <div className="relative h-screen w-full">
       <Swiper
@@ -39,15 +42,13 @@ export const HeroSlider = () => {
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
-                Reliable & Affordable
+                {t('homePage.heroSlider.first.title')}
               </h2>
-              <h3 className="text-5xl font-bold text-white lg:text-8xl" data-swiper-parallax="-400">
-                TATTOO SERVICES
+              <h3 className="text-5xl font-bold text-white lg:text-6xl" data-swiper-parallax="-400">
+                {t('homePage.heroSlider.first.subtitle')}
               </h3>
               <p className="mb-8 max-w-3xl text-[18px] text-white" data-swiper-parallax="-300">
-                Our highly qualified team of tattooists is always ready to help you make even the wildest ideas come true. The
-                level of our artists’ creativity & skills allows them to work on the most stunning artworks. Our team ensures that
-                you will get what you want for you body to look exceptional.
+                {t('homePage.heroSlider.first.cta')}
               </p>
               <CustomLink href="/" text="Book Now" className="mr-auto" />
             </div>
@@ -65,15 +66,13 @@ export const HeroSlider = () => {
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
-                Creative & Unique
+                {t('homePage.heroSlider.second.title')}
               </h2>
               <h3 className="text-5xl font-bold text-white lg:text-8xl" data-swiper-parallax="-400">
-                TATTOO ART
+                {t('homePage.heroSlider.second.subtitle')}
               </h3>
               <p className="mb-8 max-w-3xl text-[18px] text-white" data-swiper-parallax="-300">
-                At Inkvo, we guarantee safe tattooing at any of our salons. Even if you haven’t had any tattoos yet, rest assured
-                that our artists will minimize any negative impressions from your first-time tattoo. We wil also take care of all
-                healing procedures depending on your skin type.
+                {t('homePage.heroSlider.second.cta')}
               </p>
               <CustomLink href="/" text="Book Now" className="mr-auto" />
             </div>
@@ -91,15 +90,13 @@ export const HeroSlider = () => {
             <div className="absolute inset-0 bg-black/50"></div>
             <div className="absolute top-1/2 left-1/2 container flex -translate-x-1/2 -translate-y-1/2 transform flex-col items-start gap-4 p-4 text-left">
               <h2 className="text-4xl text-white lg:text-5xl" data-swiper-parallax="-600">
-                Top-notch Professionals
+                {t('homePage.heroSlider.third.title')}
               </h2>
               <h3 className="text-5xl font-bold text-white lg:text-8xl" data-swiper-parallax="-400">
-                INK TATTOO
+                {t('homePage.heroSlider.third.subtitle')}
               </h3>
               <p className="mb-8 max-w-3xl text-[18px] text-white" data-swiper-parallax="-300">
-                Welcome to Inkvo, a leading tattoo studio providing top-notch tattooing services. We love to give the opportunity
-                to all tattoo lovers to enjoy a wider range of styles from Neo Traditional tattoos to Colour realism tattoos to
-                Dotwork tattoos. With us, you can be sure of the result.
+                {t('homePage.heroSlider.third.cta')}
               </p>
               <CustomLink href="/" text="Book Now" className="mr-auto" />
             </div>

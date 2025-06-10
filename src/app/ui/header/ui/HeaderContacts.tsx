@@ -15,9 +15,9 @@ export const HeaderContacts = () => {
       <div className={`hidden lg:block ${pathname === '' ? 'bg-zinc-900 text-white' : 'bg-transparent text-black'}`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-20">
-            <a className="flex items-center gap-2 text-white duration-200 hover:text-red-500" href="tel:+37360833389">
+            <a className="flex items-center gap-2 text-white duration-200 hover:text-red-500" href="tel:+37379146506">
               <PhoneOutgoing className="h-5 w-5" />
-              <p>+37360833389</p>
+              <p>+37379146506</p>
             </a>
             <p className="text-white">Opening Hours: Mn-Sun: 10 am-8 pm</p>
           </div>

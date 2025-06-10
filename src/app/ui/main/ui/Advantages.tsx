@@ -2,6 +2,7 @@
 
 import { Container } from '@/app/ui/Container'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { useInView } from 'react-intersection-observer'
 
 export const Advantages = () => {
@@ -13,6 +14,8 @@ export const Advantages = () => {
     triggerOnce: true,
     threshold: 0.6
   })
+
+  const { t } = useTranslation()
 
   return (
     <motion.div
@@ -26,27 +29,16 @@ export const Advantages = () => {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
-              <h2 className="text-4xl lg:text-6xl">Our advantages</h2>
-              <p className="text-lg font-semibold">
-                For over 10 years of constant improvement, we have become one of the most successful tattoo salons. Here’s why
-                people choose us.
-              </p>
-              <p>
-                Continuous learning and advanced training is essential in the tattoo industry. That’s why constant evolving and
-                new products and techniques are vitally important to our staff. Every tattoo artist at Inkvo works on their skills
-                and creativity. We are also dedicated to delivering you the best possible result at an affordable price.
-              </p>
+              <h2 className="text-4xl lg:text-6xl">{t('homePage.ourAdvantagesSection.title')}</h2>
+              <p className="text-lg font-semibold">{t('homePage.ourAdvantagesSection.subtitle')}</p>
+              <p>{t('homePage.ourAdvantagesSection.text')}</p>
               <div className="aspect-video overflow-hidden rounded-lg">
                 <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
                   <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148088/1_dnbito.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
                 </video>
               </div>
               <div className="flex justify-end py-10 text-left">
-                <p className="max-w-xl text-right text-lg font-semibold">
-                  Inkvo is a unique tattoo salon that offers a wide range of tattoo styles, colors, and designs. We are committed
-                  to providing our clients with the best possible tattoo experience.
-                </p>
+                <p className="max-w-2xl text-right text-lg font-semibold">{t('homePage.ourAdvantagesSection.description')}</p>
               </div>
             </div>
           </div>
@@ -55,14 +47,9 @@ export const Advantages = () => {
             <div className="aspect-video overflow-hidden rounded-lg">
               <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
                 <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148087/3_opeqaw.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
               </video>
             </div>
-            <p>
-              Every artist at Inkvo understands that safety always comes first. That’s why the team of our salon uses only the
-              best tattoing equipment and consumables. Moreover, we guarantee 100% sterility and complete medical care in each and
-              after each procedure. Tattoo artists at our salon will make every effort to provide you with a painless experience.
-            </p>
+            <p>{t('homePage.ourAdvantagesSection.extra')}</p>
             <motion.div
               ref={ref2}
               initial={{ opacity: 0, y: 50 }}
@@ -72,7 +59,6 @@ export const Advantages = () => {
             >
               <video autoPlay loop muted playsInline controls className="h-full w-full object-cover">
                 <source src="https://res.cloudinary.com/da3wbhyei/video/upload/v1745148087/2_lyk0z5.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
               </video>
             </motion.div>
           </motion.div>

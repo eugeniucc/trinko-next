@@ -135,9 +135,9 @@ export const Hamburger = () => {
             </nav>
             <div className="flex flex-col gap-10">
               <div className="flex flex-col gap-4">
-                <a className="flex items-center gap-2 duration-200 hover:text-red-500" href="tel:+37360833389">
+                <a className="flex items-center gap-2 duration-200 hover:text-red-500" href="tel:+37379146506">
                   <PhoneOutgoing className="h-5 w-5" />
-                  <p>+37360833389</p>
+                  <p>+37379146506</p>
                 </a>
                 <p>Opening Hours: Mn-Sun: 10 am-8 pm</p>
               </div>

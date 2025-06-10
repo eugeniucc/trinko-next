@@ -3,6 +3,7 @@
 import { MapPin, Phone, Clock, Instagram, Facebook, Send, MessageCircleMore, MessageCircleHeart } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 
 type Props = {
   titleColor?: string
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export const ContactsSection = ({ titleColor, className }: Props) => {
+  const { t } = useTranslation()
+
   return (
     <section className={cn('container mx-auto mb-20 px-4', className)}>
       <motion.h2
@@ -19,7 +22,7 @@ export const ContactsSection = ({ titleColor, className }: Props) => {
         viewport={{ once: true }}
         className={cn('mb-8 text-4xl font-bold lg:text-6xl', titleColor)}
       >
-        Visit Our Studio
+        {t('aboutPage.visitSection.title')}
       </motion.h2>
 
       <motion.div
@@ -34,18 +37,20 @@ export const ContactsSection = ({ titleColor, className }: Props) => {
             <div className="flex items-start gap-4">
               <MapPin className="mt-1 h-6 w-6 flex-shrink-0 text-red-600" />
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-white">Location</h3>
-                <p className="text-lg text-white">42 Strada Pushkin, Chisinau, Moldova</p>
-                <p className="mt-1 text-sm text-zinc-400">Near the Central Park, second floor</p>
+                <h3 className="mb-2 text-xl font-semibold text-white">{t('aboutPage.visitSection.location.title')}</h3>
+                <p className="text-lg text-white">{t('aboutPage.visitSection.location.address')}</p>
+                <p className="mt-1 text-sm text-zinc-400">{t('aboutPage.visitSection.location.description')}</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <Clock className="mt-1 h-6 w-6 flex-shrink-0 text-red-600" />
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-white">Working Hours</h3>
-                <p className="text-lg text-white">Tuesday - Saturday: 11:00 - 19:00</p>
-                <p className="mt-1 text-sm text-zinc-400">By appointment only</p>
+                <div>
+                  <h3 className="mb-2 text-xl font-semibold text-white">{t('aboutPage.visitSection.hours.title')}</h3>
+                  <p className="text-lg text-white">{t('aboutPage.visitSection.hours.address')} 10:00 - 20:30</p>
+                  <p className="mt-1 text-sm text-zinc-400">{t('aboutPage.visitSection.hours.description')}</p>
+                </div>
               </div>
             </div>
           </div>
@@ -54,11 +59,12 @@ export const ContactsSection = ({ titleColor, className }: Props) => {
             <div className="flex items-start gap-4">
               <Phone className="mt-1 h-6 w-6 flex-shrink-0 text-red-600" />
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-white">Phone</h3>
-                <a href="tel:+37360833389" className="text-white">
-                  <p className="text-lg text-white duration-200 hover:text-red-500">+37360833389</p>
+                <h3 className="mb-2 text-xl font-semibold text-white">{t('aboutPage.visitSection.contacts.title')}</h3>
+
+                <a href="tel:+37379146506" className="text-white">
+                  <p className="text-lg text-white duration-200 hover:text-red-500">+373 79 146 506</p>
                 </a>
-                <p className="mt-1 text-sm text-zinc-400">Available during working hours</p>
+                <p className="mt-1 text-sm text-zinc-400">{t('aboutPage.visitSection.contacts.description')}</p>
               </div>
             </div>
           </div>
@@ -71,7 +77,7 @@ export const ContactsSection = ({ titleColor, className }: Props) => {
           viewport={{ once: true }}
           className="mt-8 border-t border-zinc-700 pt-6"
         >
-          <h3 className="mb-4 text-xl font-semibold text-white">Connect With Us</h3>
+          <h3 className="mb-4 text-xl font-semibold text-white">{t('aboutPage.visitSection.text')}</h3>
 
           <div className="flex flex-wrap gap-6">
             <a
