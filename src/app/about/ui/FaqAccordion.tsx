@@ -1,4 +1,5 @@
 'use client'
+
 import { useRef } from 'react'
 import { useInView, motion } from 'framer-motion'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'

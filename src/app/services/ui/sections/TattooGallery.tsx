@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import 'photoswipe/style.css'
 import PhotoSwipeLightbox from 'photoswipe/lightbox'
