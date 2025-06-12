@@ -1,7 +1,8 @@
 import { ReactNode } from 'react'
 import { Roboto, Montserrat } from 'next/font/google'
 import './globals.css'
-import ClientLayout from './ClientLayout'
+// import ClientLayout from './ClientLayout'
+import Providers from './Providers'
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -56,7 +57,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${roboto.variable} ${montserrat.variable} bg-gray-100 text-[14px] antialiased`}>
-        <ClientLayout>{children}</ClientLayout>
+        {/* <ClientLayout>{children}</ClientLayout> */}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

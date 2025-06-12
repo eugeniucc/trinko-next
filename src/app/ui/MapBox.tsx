@@ -10,8 +10,10 @@ export const MapBox = () => {
   useEffect(() => {
     mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_KEY!
 
+    if (!mapContainerRef.current) return
+
     const map = new mapboxgl.Map({
-      container: mapContainerRef.current!,
+      container: mapContainerRef.current,
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [28.8557086, 47.0150665],
       zoom: 17,
