@@ -15,7 +15,9 @@ export const MapBox = () => {
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [28.8557086, 47.0150665],
       zoom: 17,
-      pitch: 60
+      pitch: 60,
+      trackResize: false,
+      collectResourceTiming: false
     })
 
     const markerEl = document.createElement('div')
@@ -75,7 +77,7 @@ export const MapBox = () => {
     })
 
     return () => {
-      map.remove()
+      if (map) map.remove()
     }
   }, [])
 
