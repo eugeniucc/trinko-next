@@ -1,5 +1,5 @@
 import { MainTag } from '@/app/ui/main/MainTag'
-import { Artists } from './ui/Artists'
+// import { Artists } from './ui/Artists'
 // import { ContactsSection } from './ui/ContactsSection'
 // import { FaqAccordion } from './ui/FaqAccordion'
 import { HeroAnimation } from './ui/HeroAnimation'
