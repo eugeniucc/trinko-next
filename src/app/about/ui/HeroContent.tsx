@@ -1,5 +1,3 @@
-'use client'
-
 // import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
 import { Award, Users, Palette, Shield } from 'lucide-react'
 
