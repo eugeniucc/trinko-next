@@ -1,15 +1,13 @@
 'use client'
 
-import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
+// import { CustomBreadcrumb } from '@/app/components/CustomBreadcrumb'
 import { Award, Users, Palette, Shield } from 'lucide-react'
 
 export const HeroContent = () => {
   return (
     <section>
       <div className="container mx-auto min-h-screen px-4">
-        <div className="pt-40 pb-10 lg:pt-60">
-          <CustomBreadcrumb />
-        </div>
+        <div className="pt-40 pb-10 lg:pt-60">{/* <CustomBreadcrumb /> */}</div>
         <div className="mb-10 flex flex-col gap-4">
           <h1 className="text-4xl font-bold text-white lg:text-6xl">About Trinko Tattoo</h1>
           <p className="max-w-3xl text-xl text-gray-300 lg:text-2xl">
