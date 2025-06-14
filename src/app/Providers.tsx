@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { JivoChat } from '@/app/components/jivochat'
 import { AgeConfirm } from '@/app/components/AgeConfirm'
 import { HeaderContacts } from '@/app/ui/header/ui/HeaderContacts'
-import { HomeHeader } from '@/app/ui/header/HomeHeader'
+// import { HomeHeader } from '@/app/ui/header/HomeHeader'
 import { HomeFooter } from '@/app/ui/footer/HomeFooter'
 import { I18nextProvider } from 'react-i18next'
 import i18next from './i18n'
@@ -32,7 +32,7 @@ export default function Providers({ children }: { children: ReactNode }) {
         <JivoChat />
         <AgeConfirm />
         <HeaderContacts />
-        <HomeHeader />
+        {/* <HomeHeader /> */}
         <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
         <HomeFooter />
       </I18nextProvider>
